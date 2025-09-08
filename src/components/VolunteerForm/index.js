@@ -32,16 +32,17 @@ export default function JoinTeam({ title }) {
   };
 
   return (
-    <section className='w-full py-8 md:py-14 mb-14 md:mb-28'>
+    <section className='w-full py-8 md:py-14 pb-14 md:pb-28'>
       <div className="max-w-7xl grid md:grid-cols-2 gap-10 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Left Side Info */}
         <div>
           <h2 className="uppercase text-xl lg:text-2xl font-bold text-[#111111] mb-4">{title ?? 'JOIN OUR TEAM'}</h2>
           <p className="text-[#525252] font-medium text-sm sm:text-base md:text-lg mb-6">
-            Are you eager to contribute your skills and time for the sake of
-            Allah? Join our team of dedicated volunteers who work tirelessly to
-            produce impactful content and engage our audience across various
-            platforms.
+            {title == 'Contact Us' ? (
+              <span>If you have any questions or comments regarding our podcast, or if you would like to be a part of our podcast or have any concerns related to our work, please fill out the form below. Our team at Hablullah will get back to you as soon as possible. We look forward to hearing from you!</span>
+            ): (
+              <span>Are you eager to contribute your skills and time for the sake of Allah? Join our team of dedicated volunteers who work tirelessly to produce impactful content and engage our audience across various platforms.</span>
+            )}
           </p>
 
           <div className="hidden sm:block">
@@ -178,20 +179,20 @@ const Socials = () => {
             SPREAD THE WORD
           </p>
           <div className="flex gap-3">
-            <span className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
+            <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
               <a href="https://www.facebook.com/hablullah" target='_blank'>
                 <FaFacebookF className="font-medium text-[#0267B1] text-2xl" />
               </a>
             </span>
-            <span className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
+            <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
               <FaInstagram className="font-medium text-[#0267B1] text-2xl" />
             </span>
-            <span className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
+            <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
               <a href="https://www.youtube.com/@Hablullah-live" target='_blank'>
                 <FaYoutube className="font-medium text-[#0267B1] text-2xl" />
               </a>
             </span>
-            <span className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
+            <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
               <a href="https://www.linkedin.com/hablullah-live" target='_blank'>
                 <FaLinkedinIn className="font-medium text-[#0267B1] text-2xl" />
               </a>

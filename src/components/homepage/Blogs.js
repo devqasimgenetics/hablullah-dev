@@ -43,7 +43,7 @@ const BlogSection = () => {
                 </div>
               </div>
               <div className="w-full py-5 md:py-6">
-                <h3 className="text-xl md:text-2xl font-semibold text-[#111111] mb-2 md:mb-4">5 Things to do last days of Ramazan</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#111111] capitalize mb-2 md:mb-4">5 Things to do last days of Ramazan</h3>
                 <p className="font-medium text-sm md:text-base text-[#525252] mb-3">“Whoever fasts Ramadan with faith and seeking reward will have his past sins forgiven.”</p>
                 <p className="font-medium text-sm md:text-base text-[#525252] mb-4">— Sahih Bukhari</p>
                 <Link href={'/blogs/five-things-to-do-last-days-of-ramzan'}>
@@ -68,7 +68,7 @@ const BlogSection = () => {
                   </div>
                 </div>
                 <div className="w-full px-4">
-                  <h3 className="text-base md:text-lg lg:text-xl font-semibold text-[#111111] mb-3">{blog?.title}</h3>
+                  <h3 className="text-base md:text-lg lg:text-xl font-semibold text-[#111111] capitalize mb-3">{blog?.title}</h3>
                   <p className="font-medium text-sm md:text-base text-[#525252] mb-3">{blog?.excerpt}</p>
                   <p className="font-medium text-sm md:text-base text-[#525252] mb-4">— {blog?.reference}</p>
                   <Link href={`/blogs/${blog.title.toLowerCase().replace(/\s+/g, "-")}`}>

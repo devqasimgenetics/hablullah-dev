@@ -20,41 +20,43 @@ const Footer = () => (
                         </div>
                     </div>
 
-                    <div>
-                        <h3 className="text-lg md:text-xl text-[#111111] font-bold mb-4">Quick Links</h3>
-                        <ul className="space-y-2">
-                            {[{ title: 'Home', link: '/' }, { title: 'About Us', link: '/about-us' }, { title: 'Contact Us', link: '/contact-us' }, { title: 'Blogs', link: '/blogs' }]?.map((item, _index) => (
-                                <li className="font-medium text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
-                                    <Link href={item.link}>
-                                        {item.title}
-                                    </Link>
+                    <div className='flex justify-around gap-4 col-span-2'>
+                        <div>
+                            <h3 className="text-lg md:text-xl text-[#111111] font-bold mb-4">Quick Links</h3>
+                            <ul className="space-y-2">
+                                {[{ title: 'Home', link: '/' }, { title: 'About Us', link: '/about-us' }, { title: 'Contact Us', link: '/contact-us' }, { title: 'Blogs', link: '/blogs' }]?.map((item, _index) => (
+                                    <li className="font-medium text-sm sm:text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
+                                        <Link href={item.link}>
+                                            {item.title}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 className="text-lg md:text-xl text-[#111111] font-bold mb-4">Contact Us</h3>
+                            <ul className="space-y-2">
+                                <li className="flex items-center gap-2 font-medium text-sm sm:text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
+                                    <MdOutlineLocalPhone className="text-[#0267B1]" />
+                                    <a href="tel:04235297761">
+                                        042 - 35297761
+                                    </a>
                                 </li>
-                            ))}
-                        </ul>
-                    </div>
+                                <li className="flex items-center gap-2 font-medium text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
+                                    <MdOutlineMailOutline className="text-[#0267B1]" />
+                                    <a href="mailto:hablullah.live@info.com">
+                                        hablullah.live@info.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div></div>
+
 
                     <div>
-                        <h3 className="text-lg md:text-xl text-[#111111] font-bold mb-4">Contact Us</h3>
-                        <ul className="space-y-2">
-                            <li className="flex items-center gap-2 font-medium text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
-                                <MdOutlineLocalPhone className="text-[#0267B1]" />
-                                <a href="tel:04235297761">
-                                    042 - 35297761
-                                </a>
-                                </li>
-                            <li className="flex items-center gap-2 font-medium text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
-                                <MdOutlineMailOutline className="text-[#0267B1]" />
-                                <a href="mailto:hablullah.live@info.com">
-                                    hablullah.live@info.com
-                                </a>
-                                </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg md:text-xl text-[#111111] font-bold mb-4">Stay Connected With Hablullah</h3>
+                        <h3 className="text-lg text-[#111111] font-bold mb-4">Stay Connected With Hablullah</h3>
                         <div className="space-y-3 text-gray-400">
-                            <p className="font-medium text-base md:text-lg text-[#525252]">Podcast, videos and much more.</p>
+                            <p className="font-medium text-sm sm:text-base md:text-lg text-[#525252]">Podcast, videos and much more.</p>
                             <div className='text-xl flex items-center gap-2 sm:gap-3'>
                                 <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
                                     <img src="/icons/Google-Play.svg" alt="" />

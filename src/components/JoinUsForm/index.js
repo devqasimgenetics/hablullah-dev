@@ -3,6 +3,8 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Upload } from "lucide-react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function JoinUsForm() {
   const initialValues = {
@@ -28,13 +30,58 @@ export default function JoinUsForm() {
     cv: Yup.mixed().required("CV is required"),
   });
 
-  const handleSubmit = (values, { resetForm }) => {
-    console.log("Form Data:", values);
-    resetForm();
+  const handleSubmit = async (values, { resetForm, setSubmitting }) => {
+    try {
+      setSubmitting(true);
+      
+      // Create FormData for file upload
+      const formData = new FormData();
+      formData.append('fullName', values.fullName);
+      formData.append('email', values.email);
+      formData.append('phone', values.phone);
+      formData.append('country', values.country);
+      formData.append('interest', values.interest);
+      formData.append('hearAbout', values.hearAbout);
+      formData.append('about', values.about);
+      formData.append('availability', JSON.stringify(values.availability));
+      formData.append('cv', values.cv);
+
+      // Replace this URL with your actual API endpoint
+      const response = await fetch('/api/join-us', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast.success('Application submitted successfully!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        resetForm();
+      } else {
+        throw new Error('Failed to submit application');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast.error('Failed to submit application. Please try again.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
-    <section className='w-full py-8 md:py-14 mb-14 md:mb-28'>
+    <section className='w-full py-8 md:py-14 pb-14 md:pb-28'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="uppercase text-xl lg:text-2xl font-bold text-[#111111] mb-4">JOIN US</h2>
         <p className="text-[#525252] font-medium text-sm sm:text-base md:text-lg mb-6">
@@ -48,7 +95,7 @@ export default function JoinUsForm() {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          {({ setFieldValue }) => (
+          {({ setFieldValue, values, isSubmitting }) => (
             <Form className="space-y-6">
               {/* Name + Email */}
               <div className="grid md:grid-cols-2 gap-4">
@@ -196,9 +243,9 @@ export default function JoinUsForm() {
                           type="checkbox"
                           name="availability"
                           value={option}
-                          className="h-4 w-4"
-                        />
-                        {option}
+                          className="w-4 h-4 !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                          />
+                       <span className="text-[#111111] ">{option}</span>
                       </label>
                     )
                   )}
@@ -217,16 +264,25 @@ export default function JoinUsForm() {
                     accept=".pdf,.doc,.docx"
                     className="hidden"
                     id="cvUpload"
-                    onChange={(event) =>
-                      setFieldValue("cv", event.currentTarget.files[0])
-                    }
+                    onChange={(event) => {
+                      const file = event.currentTarget.files[0];
+                      setFieldValue("cv", file);
+                      if (file) {
+                        toast.info(`File "${file.name}" selected successfully!`, {
+                          position: "top-right",
+                          autoClose: 3000,
+                        });
+                      }
+                    }}
                   />
                   <label
                     htmlFor="cvUpload"
                     className="flex flex-col sm:flex-row items-center justify-center cursor-pointer text-gray-600 gap-3"
                   >
                     <Upload className="w-6 h-6 mb-2" />
-                    <span>UPLOAD YOUR CV</span>
+                    <span>
+                      {values.cv ? `Selected: ${values.cv.name}` : 'UPLOAD YOUR CV'}
+                    </span>
                   </label>
                 </div>
                 <ErrorMessage
@@ -239,13 +295,28 @@ export default function JoinUsForm() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#0267B1] text-white font-semibold text-sm hover:bg-black hover:text-white transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5"
+                disabled={isSubmitting}
+                className="w-full bg-[#0267B1] text-white font-semibold text-sm hover:bg-black hover:text-white transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                SUBMIT NOW
+                {isSubmitting ? 'SUBMITTING...' : 'SUBMIT NOW'}
               </button>
             </Form>
           )}
         </Formik>
+        
+        {/* Toast Container */}
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
       </div>
     </section>
   );

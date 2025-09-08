@@ -35,7 +35,7 @@ export default function PartnerForm() {
   };
 
   return (
-    <section className='w-full py-8 md:py-14 mb-14 md:mb-28'>
+    <section className='w-full py-8 md:py-14 pb-14 md:pb-28'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-xl lg:text-2xl font-bold text-[#111111] mb-4">PARTNER WITH US</h2>
         <p className="text-[#525252] font-medium text-sm sm:text-base md:text-lg mb-6">

@@ -9,10 +9,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <HeroSection 
-        imgUrl='/showcase/prophet-as-role-model.png'
-      />
-      <RoleModelCards />
+      <div className='bg-[#F9F9F9]'>
+        <HeroSection 
+          imgUrl='/showcase/prophet-as-role-model.png'
+        />
+        <RoleModelCards />
+      </div>
       <NewsletterSection />
       <Footer />
     </div>
