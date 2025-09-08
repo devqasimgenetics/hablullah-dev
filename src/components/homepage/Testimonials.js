@@ -75,9 +75,9 @@ const Testimonials = () => {
               <button
                 key={index}
                 onClick={() => goToHadith(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${index === currentHadith
-                  ? 'bg-[#0267B1] scale-125'
-                  : 'bg-[#D9D9D9] hover:bg-gray-400'
+                className={`h-3 rounded-full transition-all duration-300 cursor-pointer ${index === currentHadith
+                  ? 'w-4.5 bg-[#0267B1] scale-125'
+                  : 'w-3 bg-[#D9D9D9] hover:bg-gray-400'
                   }`}
                 aria-label={`Go to hadith ${index + 1}`}
               />

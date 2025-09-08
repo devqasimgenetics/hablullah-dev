@@ -59,7 +59,7 @@ export default function JoinUsForm() {
                   <Field
                     name="fullName"
                     placeholder="Enter Full Name"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="fullName"
@@ -75,7 +75,7 @@ export default function JoinUsForm() {
                     name="email"
                     type="email"
                     placeholder="Enter Email Address"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="email"
@@ -94,7 +94,7 @@ export default function JoinUsForm() {
                   <Field
                     name="phone"
                     placeholder="Enter Phone Number"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="phone"
@@ -109,7 +109,7 @@ export default function JoinUsForm() {
                   <Field
                     name="country"
                     placeholder="Enter Country/City"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="country"
@@ -128,7 +128,7 @@ export default function JoinUsForm() {
                   <Field
                     as="select"
                     name="interest"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   >
                     <option value="">Select Option</option>
                     <option value="teaching">Teaching</option>
@@ -149,7 +149,7 @@ export default function JoinUsForm() {
                   <Field
                     as="select"
                     name="hearAbout"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   >
                     <option value="">Select Option</option>
                     <option value="friends">Friends</option>
@@ -174,7 +174,7 @@ export default function JoinUsForm() {
                   name="about"
                   rows="4"
                   placeholder="Write Here"
-                  className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                  className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                 <ErrorMessage
                   name="about"

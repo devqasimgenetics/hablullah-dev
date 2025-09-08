@@ -5,7 +5,7 @@ const Showcase = () => {
         <>
         <section
             style={{ backgroundImage: "url('/imgs/homepage/showcase.png')" }}
-            className="hidden md:block bg-gradient-to-r from-blue-900 to-blue-700 bg-no-repeat bg-center bg-cover text-white mb-14 md:mb-28">
+            className="hidden md:block bg-[#0267b1] bg-no-repeat bg-center bg-cover text-white mb-14 md:mb-28">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="text-left">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold leading-16 mb-6">

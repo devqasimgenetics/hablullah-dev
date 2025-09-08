@@ -61,7 +61,7 @@ export default function PartnerForm() {
                     type="text"
                     name="fullName"
                     placeholder="Enter Full Name"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="fullName"
@@ -77,7 +77,7 @@ export default function PartnerForm() {
                     type="text"
                     name="organization"
                     placeholder="Enter Organization Name"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="organization"
@@ -97,7 +97,7 @@ export default function PartnerForm() {
                     type="email"
                     name="email"
                     placeholder="Enter Email Address"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="email"
@@ -113,7 +113,7 @@ export default function PartnerForm() {
                     type="text"
                     name="phone"
                     placeholder="Enter Phone Number"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="phone"
@@ -133,7 +133,7 @@ export default function PartnerForm() {
                     type="url"
                     name="website"
                     placeholder="Enter Website Link"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="website"
@@ -148,7 +148,7 @@ export default function PartnerForm() {
                   <Field
                     as="select"
                     name="collaboration"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   >
                     <option value="">Select Option</option>
                     <option value="sponsorship">Sponsorship</option>
@@ -172,7 +172,7 @@ export default function PartnerForm() {
                   as="textarea"
                   name="message"
                   placeholder="Write Here"
-                  className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                  className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                 />
                 <ErrorMessage
                   name="message"

@@ -65,7 +65,7 @@ export default function JoinTeam({ title }) {
                   <Field
                     name="fullName"
                     placeholder="Enter Full Name"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="fullName"
@@ -82,7 +82,7 @@ export default function JoinTeam({ title }) {
                     name="email"
                     type="email"
                     placeholder="Enter Email Address"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="email"
@@ -98,7 +98,7 @@ export default function JoinTeam({ title }) {
                   <Field
                     name="phone"
                     placeholder="Enter Phone Number"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="phone"
@@ -116,7 +116,7 @@ export default function JoinTeam({ title }) {
                     name="message"
                     placeholder="Write Message"
                     rows="4"
-                    className="w-full !text-[#1111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
+                    className="w-full !text-[#111111] border border-[#BCBCBC] outline-0 px-3 py-2 mt-1"
                   />
                   <ErrorMessage
                     name="message"

@@ -46,7 +46,7 @@ const BlogSection = () => {
                 <h3 className="text-xl md:text-2xl font-semibold text-[#111111] mb-2 md:mb-4">5 Things to do last days of Ramazan</h3>
                 <p className="font-medium text-sm md:text-base text-[#525252] mb-3">“Whoever fasts Ramadan with faith and seeking reward will have his past sins forgiven.”</p>
                 <p className="font-medium text-sm md:text-base text-[#525252] mb-4">— Sahih Bukhari</p>
-                <Link href={'/blogs/${5-things-to-do-last-days-of-ramzan}'}>
+                <Link href={'/blogs/five-things-to-do-last-days-of-ramzan'}>
                   <span className="flex items-center gap-2 font-semibold text-[#0267B1] text-sm md:text-base hover:text-black hover:underline uppercase transition-all mt-auto cursor-pointer">
                     Read More
                     <FaChevronRight className="text-xs sm:text-sm" />
@@ -71,7 +71,7 @@ const BlogSection = () => {
                   <h3 className="text-base md:text-lg lg:text-xl font-semibold text-[#111111] mb-3">{blog?.title}</h3>
                   <p className="font-medium text-sm md:text-base text-[#525252] mb-3">{blog?.excerpt}</p>
                   <p className="font-medium text-sm md:text-base text-[#525252] mb-4">— {blog?.reference}</p>
-                  <Link href={'/blogs/${five-things-to-do-last-days-of-ramzan}'}>
+                  <Link href={`/blogs/${blog.title.toLowerCase().replace(/\s+/g, "-")}`}>
                     <button className="flex items-center gap-2 font-semibold text-[#0267B1] text-sm md:text-base hover:text-black hover:underline uppercase transition-all cursor-pointer">
                       Read More
                       <FaChevronRight className="text-xs sm:text-sm" />
