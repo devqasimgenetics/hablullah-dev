@@ -13,6 +13,7 @@ import { surahs } from '@/data/details-data-summaryofsurah'
 const Index = () => {
   const [savedId, setSavedId] = useState(null)
   const [detailObj, setDetailObj] = useState({})
+  const [displayInfo, setDisplayInfo] = useState('')
 
   useEffect(() => {
     const filteredDetail = surahs?.find((item) => item?.id == savedId) ?? {};
@@ -31,10 +32,12 @@ const Index = () => {
           <DetailCards
             data={detailObj}
             setToggler={setSavedId}
+            displayInfo={displayInfo}
           />
       ) : (
         <SummaryOfSurah
           setToggler={setSavedId}
+          setDisplayInfo={setDisplayInfo}
           data={summaryOfSurrah} />
       )}
       <NewsletterSection />

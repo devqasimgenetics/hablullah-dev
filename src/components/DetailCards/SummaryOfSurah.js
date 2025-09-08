@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Index = ({ setToggler, data }) => {
+const Index = ({ setToggler, setDisplayInfo, data }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10; // You can adjust this number
 
@@ -74,7 +74,10 @@ const Index = ({ setToggler, data }) => {
           {currentItems.map((item, index) => (
             <div
               key={item.slug || index}
-              onClick={() => setToggler(item?.number)}
+              onClick={() => {
+                setToggler(item?.number)
+                setDisplayInfo(`${item.englishMeaning} (${item.englishTransliteration})`)
+              }}
               className="bg-[#F1F4F8] cursor-pointer px-5 py-6 hover:bg-gray-100 transition-colors duration-200"
             >
               <div className="flex justify-between items-start">
