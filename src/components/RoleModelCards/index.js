@@ -114,7 +114,7 @@ const ProphetBiographyCards = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6 mb-24">
+    <div className="max-w-4xl mx-auto p-6 space-y-6 pb-24">
       {data.map((item, index) => (
         <motion.div
           key={item.id}

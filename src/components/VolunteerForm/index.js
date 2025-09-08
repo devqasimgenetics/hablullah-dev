@@ -4,6 +4,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Phone, Mail, MapPin } from "lucide-react";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -28,6 +31,15 @@ export default function JoinTeam({ title }) {
 
   const handleSubmit = (values, { resetForm }) => {
     console.log("Form Data:", values);
+
+    toast.success('Your response has been submitted successfully!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
     resetForm();
   };
 
@@ -51,7 +63,7 @@ export default function JoinTeam({ title }) {
         </div>
 
         {/* Right Side Form */}
-        <div className="bg-white md:p-6">
+        <div className="bg-white px-4 py-6 md:px-6 md:py-8">
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -140,6 +152,19 @@ export default function JoinTeam({ title }) {
         <div className="block sm:hidden mt-6">
           <Socials />
         </div>
+
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
       </div>
     </section>
   );

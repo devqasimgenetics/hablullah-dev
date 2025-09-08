@@ -70,7 +70,7 @@ const Categories = () => {
       {
         breakpoint: 480, // <480px (small phones)
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           arrows: false,
         },
       },
