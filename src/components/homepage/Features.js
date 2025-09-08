@@ -1,9 +1,10 @@
 import React from 'react';
+import Link from 'next/link'
 
 const IslamicGuidanceComponent = () => {
   return (
     <div className='bg-[#F8F8EF] py-8 md:py-14 mb-14 md:mb-28'>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="bg-white overflow-hidden">
             <div className="relative h-80">
@@ -23,12 +24,16 @@ const IslamicGuidanceComponent = () => {
                 relationships for the better.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                <button className="bg-[#0267B1] text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
-                  SUMMARY OF SURAH
-                </button>
-                <button className="bg-[#F3FBFF] text-[#0267B1] border border-[#0267B1] font-semibold text-sm hover:bg-black hover:text-white transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
-                  SUBJECT WISE
-                </button>
+                <Link href={'/summary-of-surrah'}>
+                  <button className="bg-[#0267B1] text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
+                    SUMMARY OF SURAH
+                  </button>
+                </Link>
+                <Link href={'/subject-wise'}>
+                  <button className="bg-[#F3FBFF] text-[#0267B1] border border-[#0267B1] font-semibold text-sm hover:bg-black hover:text-white transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
+                    SUBJECT WISE
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -52,12 +57,16 @@ const IslamicGuidanceComponent = () => {
                 journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                <button className="bg-[#0267B1] text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
-                  SITUATION WISE DUA
-                </button>
-                <button className="bg-[#F3FBFF] text-[#0267B1] border border-[#0267B1] font-semibold text-sm hover:bg-black hover:text-white transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
-                  HOW ARE YOU FEELING
-                </button>
+                <Link href={'/situation-wise-dua'}>
+                  <button className="bg-[#0267B1] text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
+                    SITUATION WISE DUA
+                  </button>
+                </Link>
+                <Link href={'/how-are-you-feeling'}>
+                  <button className="bg-[#F3FBFF] text-[#0267B1] border border-[#0267B1] font-semibold text-sm hover:bg-black hover:text-white transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
+                    HOW ARE YOU FEELING
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -86,9 +95,11 @@ const IslamicGuidanceComponent = () => {
                 With each hadees, you'll gain practical tools to navigate today's
                 challenges with faith and integrity.
               </p>
-              <button className="w-full sm:w-fit bg-[#0267B1] text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
-                LEARN MORE
-              </button>
+              <Link href={'/hadees-by-topic'}>
+                <button className="w-full sm:w-fit bg-[#0267B1] text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
+                  LEARN MORE
+                </button>
+              </Link>
             </div>
           </div>
         </div>

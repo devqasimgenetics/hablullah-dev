@@ -62,7 +62,7 @@ const Testimonials = () => {
           <div
             style={{ backgroundImage: "url('/imgs/showcase/testimonials-bg.svg')" }}
             className="w-full bg-slate-800 bg-center bg-cover bg-no-repeat px-4 md:px-8 lg:px-12 pt-16 pb-9 text-center">
-            <p className="font-medium text-white text-base md:text-lg lg:text-xl leading-relaxed mb-4 mx-auto">
+            <p className="font-medium text-white line-clamp-3 text-base md:text-lg lg:text-xl leading-relaxed md:px-12 mb-4 mx-auto">
               {hadiths[currentHadith].text}
             </p>
             <p className="text-white text-sm md:text-base font-semibold tracking-wider">
