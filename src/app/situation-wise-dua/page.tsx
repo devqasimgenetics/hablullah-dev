@@ -27,7 +27,6 @@ const Index = () => {
       <HeroSection
         imgUrl='/showcase/situation-wise-dua.png'
       />
-      {savedId}
       {savedId ? (
         <DetailCards
           data={detailObj}
