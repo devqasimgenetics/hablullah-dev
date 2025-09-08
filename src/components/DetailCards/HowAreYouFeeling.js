@@ -74,7 +74,7 @@ const Index = ({ setToggler, data }) => {
           {currentItems.map((item, index) => (
             <div
               key={item.slug || index}
-              onClick={() => setToggler(prev => !prev)}
+              onClick={() => setToggler(item.id)}
               className="bg-[#F1F4F8] cursor-pointer px-5 py-6 hover:bg-gray-100 transition-colors duration-200"
             >
               <div className="flex justify-between items-start">

@@ -1,16 +1,25 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Navbar';
 import HeroSection from '@/components/Showcase';
 import HowAreYouFeeling from '@/components/DetailCards/HowAreYouFeeling'
-import DetailCards from '@/components/DetailCards/HadeesByTopicDetails'
+import DetailCards from '@/components/DetailCards/HowAreYouFeelingDetails'
 import NewsletterSection from '@/components/homepage/Newsletter';
 import Footer from '@/components/Footer';
 
 import { howAreYouFeeling } from '@/data';
+import { duas } from '@/data/details-data-feelingwisedua'
 
 const Index = () => {
-  const [toggler, setToggler] = useState(true)
+  const [savedId, setSavedId] = useState(null)
+  const [detailObj, setDetailObj] = useState({})
+
+  useEffect(() => {
+    const filteredDetail = duas?.find((item) => item?.id === savedId) ?? {};
+
+    setDetailObj(filteredDetail)
+
+  }, [savedId])
 
   return (
     <div className="min-h-screen bg-white">
@@ -18,14 +27,15 @@ const Index = () => {
       <HeroSection 
         imgUrl='/showcase/how-are-you-feeling.png'
       />
-      {toggler ? (
-        <HowAreYouFeeling
-          setToggler={setToggler}
-          data={howAreYouFeeling} />
+      {savedId ? (
+          <DetailCards
+            data={detailObj}
+            setToggler={setSavedId}
+          />
       ) : (
-        <DetailCards
-          setToggler={setToggler}
-        />
+        <HowAreYouFeeling
+          setToggler={setSavedId}
+          data={howAreYouFeeling} />
       )}
       <NewsletterSection />
       <Footer />
