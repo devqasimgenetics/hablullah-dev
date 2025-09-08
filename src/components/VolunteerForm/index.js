@@ -179,13 +179,17 @@ const Socials = () => {
           </p>
           <div className="flex gap-3">
             <span className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
+            <a href="https://www.facebook.com/hablullah" target='_blank'>
               <FaFacebookF className="font-medium text-[#0267B1] text-2xl" />
+              </a>
             </span>
             <span className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
               <FaInstagram className="font-medium text-[#0267B1] text-2xl" />
             </span>
             <span className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
+            <a href="https://www.youtube.com/@Hablullah-live" target='_blank'>
               <FaYoutube className="font-medium text-[#0267B1] text-2xl" />
+              </a>
             </span>
             <span className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
               <FaLinkedinIn className="font-medium text-[#0267B1] text-2xl" />

@@ -14,7 +14,9 @@ const Footer = () => (
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div>
                         <div>
-                            <img src="/imgs/logo.svg" alt="logo" className="h-16 object-cover" />
+                            <Link href={'/'}>
+                                <img src="/imgs/logo.svg" alt="logo" className="h-16 object-cover" />
+                            </Link>
                         </div>
                     </div>
 
@@ -70,9 +72,15 @@ const Footer = () => (
             <div className="max-w-7xl flex items-center justify-between gap-6 mx-auto px-4 sm:px-6 lg:px-8">
                 <p className="text-xs sm:text-sm">Copyright © 2024 | Powered by HABLULLAH</p>
                 <div className='text-xl flex items-center gap-2 sm:gap-3'>
-                    <FaFacebookF />
-                    <FaInstagram />
-                    <FaYoutube />
+                    <a href="https://www.facebook.com/hablullah" target='_blank'>
+                        <FaFacebookF />
+                    </a>
+                    <a href="https://www.instagram.com/hablullah" target='_blank'>
+                        <FaInstagram />
+                    </a>
+                    <a href="https://www.youtube.com/@Hablullah-live" target='_blank'>
+                        <FaYoutube />
+                    </a>
                 </div>
             </div>
         </div>

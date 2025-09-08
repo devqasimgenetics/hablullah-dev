@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Index = ({ data }) => {
+const Index = ({ data, setToggler }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10; // You can adjust this number
 
@@ -68,12 +68,13 @@ const Index = ({ data }) => {
 
   return (
     <div className="w-full mb-24">
-      <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Items Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
           {currentItems.map((item, index) => (
             <div
               key={item.slug || index}
+              onClick={() => setToggler(prev => !prev)}
               className="bg-[#F1F4F8] cursor-pointer px-5 py-6 hover:bg-gray-100 transition-colors duration-200"
             >
               <div className="flex justify-between items-start">
