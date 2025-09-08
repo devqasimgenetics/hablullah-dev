@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/Navbar';
 import HeroSection from '@/components/Showcase';
 import HadeesByTopic from '@/components/DetailCards/HadeesByTopic'
@@ -8,9 +8,19 @@ import NewsletterSection from '@/components/homepage/Newsletter';
 import Footer from '@/components/Footer';
 
 import { hadeesByTopic } from '@/data'
+import { surahs } from '@/data/details-data-summaryofsurah'
 
 const Index = () => {
-  const [toggler, setToggler] = useState(true)
+  const [savedId, setSavedId] = useState(null)
+  const [detailObj, setDetailObj] = useState({})
+  const [displayInfo, setDisplayInfo] = useState('')
+
+  useEffect(() => {
+    const filteredDetail = surahs?.find((item) => item?.id == savedId) ?? {};
+
+    setDetailObj(filteredDetail)
+
+  }, [savedId])
 
   return (
     <div className="min-h-screen bg-white">
@@ -18,14 +28,17 @@ const Index = () => {
       <HeroSection
         imgUrl='/showcase/hadees-by-topic.png'
       />
-      {toggler ? (
-        <HadeesByTopic
-          setToggler={setToggler}
-          data={hadeesByTopic} />
-      ) : (
-        <DetailCards
-          setToggler={setToggler}
+      {savedId ? (
+          <DetailCards
+          data={detailObj}
+          setToggler={setSavedId}
+          displayInfo={displayInfo}
         />
+      ) : (
+        <HadeesByTopic
+          setToggler={setSavedId}
+          setDisplayInfo={setDisplayInfo}
+          data={hadeesByTopic} />
       )}
       <NewsletterSection />
       <Footer />

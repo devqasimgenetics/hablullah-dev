@@ -1,4 +1,5 @@
 export const hadeesByTopic = [{
+    id: 1,
     hadithNumber: "7563",
     chapterNumber: "97",
     arabic: "صحیح بخاری",
@@ -6,6 +7,7 @@ export const hadeesByTopic = [{
     slug: "sahih-bukhari"
 },
 {
+    id: 2,
     hadithNumber: "7563",
     chapterNumber: "56",
     arabic: "صحیح مسلم",
@@ -13,6 +15,7 @@ export const hadeesByTopic = [{
     slug: "sahih-muslim"
 },
 {
+    id: 3,
     hadithNumber: "5274",
     chapterNumber: "43",
     arabic: "سنن ابو داود",
@@ -20,6 +23,7 @@ export const hadeesByTopic = [{
     slug: "sunan-abu-dawood"
 },
 {
+    id: 4,
     hadithNumber: "3956",
     chapterNumber: "51",
     arabic: "جامع ترمذی",
@@ -27,6 +31,7 @@ export const hadeesByTopic = [{
     slug: "jami-al-tirmidhi"
 },
 {
+    id: 5,
     hadithNumber: "5662",
     chapterNumber: "52",
     arabic: "سنن نسائی",
@@ -34,6 +39,7 @@ export const hadeesByTopic = [{
     slug: "sunan-an-nasai"
 },
 {
+    id: 6,
     hadithNumber: "4341",
     chapterNumber: "37",
     arabic: "سنن ابن ماجہ",
@@ -41,6 +47,7 @@ export const hadeesByTopic = [{
     slug: "sunan-ibn-e-majah"
 },
 {
+    id: 7,
     hadithNumber: "1720",
     chapterNumber: "61",
     arabic: "موطا امام مالک",
@@ -48,6 +55,7 @@ export const hadeesByTopic = [{
     slug: "muwatta-malik"
 },
 {
+    id: 8,
     hadithNumber: "27316",
     chapterNumber: "66",
     arabic: "مسند احمد",
@@ -652,15 +660,15 @@ export const summaryOfSurrah = [
   ];
   
 export const subjectWise = [
-    { number: "Fasting is a shield.", arabic: "روزہ", englishTransliteration: "Fasting", englishMeaning: "Roza" },
-    { number: "The best of places is the mosque.", arabic: "قبلہ", englishTransliteration: "Direction of Prayer", englishMeaning: "Qibla" },
-    { number: "Hajj is Arafah.", arabic: "حج", englishTransliteration: "Pilgrimage", englishMeaning: "Hajj" },
-    { number: "Rights are due.", arabic: "حقوق العباد", englishTransliteration: "Rights of People", englishMeaning: "Haqooq ul Ibad" },
-    { number: "Honesty in trade leads to success.", arabic: "تجارت", englishTransliteration: "Trade", englishMeaning: "Tijarat" },
-    { number: "Good character is key.", arabic: "اخلاق", englishTransliteration: "Morals", englishMeaning: "Akhlaq" },
-    { number: "Struggle in the path of good.", arabic: "جہاد", englishTransliteration: "Struggle", englishMeaning: "Jihad" },
-    { number: "Forgive and move on.", arabic: "مغفرت", englishTransliteration: "Forgiveness", englishMeaning: "Maghfirat" },
-    { number: "Care for the orphan.", arabic: "یتیم", englishTransliteration: "Orphan", englishMeaning: "Yateem" },
-    { number: "Let there be no compulsion in religion.", arabic: "ہم جنس پرستی", englishTransliteration: "Homosexuality", englishMeaning: "Hum jins parasti" },
-    { number: "Indeed, with hardship comes ease.", arabic: "دباؤ اور پریشانی", englishTransliteration: "Stress and Anxiety", englishMeaning: "Dabao aur Pareshani" }
+    { id: 1, number: "Fasting is a shield.", arabic: "روزہ", englishTransliteration: "Fasting", englishMeaning: "Roza" },
+    { id: 2, number: "The best of places is the mosque.", arabic: "قبلہ", englishTransliteration: "Direction of Prayer", englishMeaning: "Qibla" },
+    { id: 3,number: "Hajj is Arafah.", arabic: "حج", englishTransliteration: "Pilgrimage", englishMeaning: "Hajj" },
+    { id: 4, number: "Rights are due.", arabic: "حقوق العباد", englishTransliteration: "Rights of People", englishMeaning: "Haqooq ul Ibad" },
+    { id: 5, number: "Honesty in trade leads to success.", arabic: "تجارت", englishTransliteration: "Trade", englishMeaning: "Tijarat" },
+    { id: 6, number: "Good character is key.", arabic: "اخلاق", englishTransliteration: "Morals", englishMeaning: "Akhlaq" },
+    { id: 7, number: "Struggle in the path of good.", arabic: "جہاد", englishTransliteration: "Struggle", englishMeaning: "Jihad" },
+    { id: 8, number: "Forgive and move on.", arabic: "مغفرت", englishTransliteration: "Forgiveness", englishMeaning: "Maghfirat" },
+    { id: 9, number: "Care for the orphan.", arabic: "یتیم", englishTransliteration: "Orphan", englishMeaning: "Yateem" },
+    { id: 10, number: "Let there be no compulsion in religion.", arabic: "ہم جنس پرستی", englishTransliteration: "Homosexuality", englishMeaning: "Hum jins parasti" },
+    { id: 11, number: "Indeed, with hardship comes ease.", arabic: "دباؤ اور پریشانی", englishTransliteration: "Stress and Anxiety", englishMeaning: "Dabao aur Pareshani" }
 ];
