@@ -1,5 +1,5 @@
 
-const Showcase = ({ children = '', imgUrl = '/showcase/default-showcase.png' }) => {
+const Showcase = ({ children, imgUrl = '/showcase/default-showcase.png' }) => {
     return (
         <section
             style={{ backgroundImage: `url('/imgs${imgUrl}')` }}
