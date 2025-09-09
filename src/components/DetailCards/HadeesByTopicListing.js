@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { HiArrowNarrowLeft } from "react-icons/hi";
 
-const Index = ({ data, setDisplayInfo, setToggler }) => {
+const Index = ({ data, setToggler }) => {
   const [itemsToShow, setItemsToShow] = useState(10);
 
   const handleLoadMore = () => {
@@ -15,6 +15,13 @@ const Index = ({ data, setDisplayInfo, setToggler }) => {
   return (
     <div className="w-full mb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div onClick={() => setToggler(null)} className='group w-full flex items-center gap-3 mb-6 sm:mb-8'>
+          <span className='text-[#3E5261] text-base md:text-xl lg:text-2xl transition-all group-hover:-left-2'>
+            <HiArrowNarrowLeft />
+          </span>
+          <span className='font-semibold text-base md:text-xl lg:text-2xl text-[#111111] transition-all group-hover:underline cursor-pointer'>Back</span>
+        </div>
+
         {/* Items Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
           {displayedItems.map((item, index) => (

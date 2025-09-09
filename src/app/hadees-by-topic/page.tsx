@@ -32,7 +32,6 @@ const Index = () => {
         <ListingCards
           data={detailObj?.books}
           setToggler={setSavedId}
-          displayInfo={displayInfo}
         />
       ) : (
         <HadeesByTopic
