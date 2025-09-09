@@ -9,8 +9,8 @@ const Index = ({ data, setToggler }) => {
     setItemsToShow(prevItems => prevItems + 10);
   };
 
-  const displayedItems = data?.slice(0, itemsToShow) || [];
-  const hasMoreItems = data && itemsToShow < data.length;
+  const displayedItems = data?.books?.slice(0, itemsToShow) || [];
+  const hasMoreItems = data?.books && itemsToShow < data?.books?.length;
 
   return (
     <div className="w-full mb-24">

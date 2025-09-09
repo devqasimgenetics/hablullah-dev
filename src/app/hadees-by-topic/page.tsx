@@ -30,7 +30,7 @@ const Index = () => {
       />
       {savedId ? (
         <ListingCards
-          data={detailObj?.books}
+          data={detailObj}
           setToggler={setSavedId}
         />
       ) : (
