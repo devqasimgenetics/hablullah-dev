@@ -25,7 +25,7 @@ const Footer = () => (
                             <h3 className="text-lg md:text-xl text-[#111111] font-bold mb-4">Quick Links</h3>
                             <ul className="space-y-2">
                                 {[{ title: 'Home', link: '/' }, { title: 'About Us', link: '/about-us' }, { title: 'Contact Us', link: '/contact-us' }, { title: 'Blogs', link: '/blogs' }]?.map((item, _index) => (
-                                    <li className="font-medium text-sm sm:text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
+                                    <li key={item?.title} className="font-medium text-sm sm:text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
                                         <Link href={item.link}>
                                             {item.title}
                                         </Link>

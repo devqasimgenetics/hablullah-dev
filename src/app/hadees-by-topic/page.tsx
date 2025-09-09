@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import Header from '@/components/Navbar';
 import HeroSection from '@/components/Showcase';
 import HadeesByTopic from '@/components/DetailCards/HadeesByTopic'
-import DetailCards from '@/components/DetailCards/HadeesByTopicDetails'
+import ListingCards from '@/components/DetailCards/HadeesByTopicListing'
 import NewsletterSection from '@/components/homepage/Newsletter';
 import Footer from '@/components/Footer';
 
 import { hadeesByTopic } from '@/data'
-import { surahs } from '@/data/details-data-summaryofsurah'
+import { hadees } from '@/data/details-data-hadeesbytopic'
 
 const Index = () => {
   const [savedId, setSavedId] = useState(null)
@@ -16,7 +16,7 @@ const Index = () => {
   const [displayInfo, setDisplayInfo] = useState('')
 
   useEffect(() => {
-    const filteredDetail = surahs?.find((item) => item?.id == savedId) ?? {};
+    const filteredDetail = hadees?.find((item) => item?.id == savedId) ?? {};
 
     setDetailObj(filteredDetail)
 
@@ -29,8 +29,8 @@ const Index = () => {
         imgUrl='/showcase/hadees-by-topic.png'
       />
       {savedId ? (
-          <DetailCards
-          data={detailObj}
+        <ListingCards
+          data={detailObj?.books}
           setToggler={setSavedId}
           displayInfo={displayInfo}
         />
