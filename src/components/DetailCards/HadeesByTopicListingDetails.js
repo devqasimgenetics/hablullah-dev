@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { HiArrowNarrowLeft } from "react-icons/hi";
 
-const Index = ({ data, displayInfo, setToggler }) => {
+const Index = ({ data }) => {
   return (
     <div className="w-full mb-24">
       <div className="max-w-7xl mx-auto">
@@ -17,6 +17,9 @@ const Index = ({ data, displayInfo, setToggler }) => {
             <h3 className="text-[#525252] font-medium text-sm sm:text-base md:text-xl mb-2 md:mb-3">
               {item?.english?.text}
             </h3>
+            <p className="text-[#3E5261] text-right font-semibold text-sm sm:text-base md:text-xl mb-2 sm:mb-5">
+              {item?.english?.narrator}
+            </p>
           </div>
         ))}
       </div>

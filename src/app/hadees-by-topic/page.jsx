@@ -14,6 +14,7 @@ const Index = () => {
   const [savedId, setSavedId] = useState(null)
   const [detailObj, setDetailObj] = useState({})
   const [displayInfo, setDisplayInfo] = useState({})
+  const [isDetailPageOpen, setIsDetailPageOpen] = useState(false)
 
   useEffect(() => {
     const filteredDetail = hadees?.find((item) => item?.id == savedId) ?? {};
@@ -27,10 +28,14 @@ const Index = () => {
       <Header />
       {savedId ? (
         <HeroSection>
-          <div className='w-full flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-6'>
+          {isDetailPageOpen ? (
+            <h1 className='uppercase text-center text-3xl lg:text-5xl xl:text-8xl font-medium'>{displayInfo?.english}</h1>
+          ): (
+            <div className='w-full flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-6'>
             <h1 className='uppercase text-3xl lg:text-4xl xl:text-5xl font-bold'>{displayInfo?.english}</h1>
             <h1 className='text-3xl lg:text-4xl xl:text-8xl font-bold font-arabic'>{displayInfo?.arabic}</h1>
           </div>
+          )}
         </HeroSection>
       ) : (
         <HeroSection>
@@ -42,6 +47,8 @@ const Index = () => {
           data={detailObj}
           displayInfo={displayInfo}
           setToggler={setSavedId}
+          setDisplayInfo={setDisplayInfo}
+          setIsDetailPageOpen={setIsDetailPageOpen}
         />
       ) : (
         <HadeesByTopic

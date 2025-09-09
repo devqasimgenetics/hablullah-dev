@@ -36,6 +36,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "ArabQuran Islamic";
+  src: url("/fonts/ArabQuranIslamic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   background: var(--background);
@@ -45,6 +51,10 @@ body {
 
 .font-arabic {
   font-family: "AlMajeed Quranic", serif;
+}
+
+.font-arabic-calligraphy {
+  font-family: "ArabQuran Islamic", serif;
 }
 
 .font-urdu {
