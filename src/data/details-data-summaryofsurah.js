@@ -1423,7 +1423,7 @@ export const surahs = [
   },
   {
     "id": 65,
-    "name": "At-Tahrim",
+    "name": "At-Talaq",
     "summaries": [
       {
         "author": "Mufti Muhammad Shafi Usmani",
@@ -1447,6 +1447,30 @@ export const surahs = [
   },
   {
     "id": 66,
+    "name": "At-Tahrim",
+    "summaries": [
+      {
+        "author": "Mufti Muhammad Shafi Usmani",
+        "reference": "Ma'ariful Quran",
+        "english": "Surah At-Tahrim deals with issues related to personal conduct and the importance of maintaining piety. It emphasizes the need to avoid sinful behavior and the consequences of such actions on personal and communal levels.",
+        "urdu": "سورہ تحریم ذاتی رویے اور پرہیزگاری کو برقرار رکھنے کی اہمیت سے متعلق مسائل پر بات کرتی ہے۔ یہ گناہ آلود رویے سے بچنے کی ضرورت اور ایسے اعمال کے ذاتی اور اجتماعی سطح پر اثرات پر زور دیتی ہے۔"
+      },
+      {
+        "author": "Sheikh Abdur Rahman As-Sa'di",
+        "reference": "Tafsir As-Sa'di",
+        "english": "Surah At-Tahrim focuses on the importance of personal purity and righteousness. It discusses the consequences of failing to adhere to Islamic principles in personal conduct and the impact on one's relationship with Allah.",
+        "urdu": "سورہ تحریم ذاتی پاکیزگی اور راستبازی کی اہمیت پر توجہ مرکوز کرتی ہے۔ یہ اسلامی اصولوں پر عمل نہ کرنے کے نتائج اور اللہ کے ساتھ تعلق پر اثرات پر بات کرتی ہے۔"
+      },
+      {
+        "author": "Sheikh Abu Al-Huda",
+        "reference": "Al-Huda Academy",
+        "english": "Surah At-Tahrim provides guidance on maintaining moral integrity and the importance of avoiding sinful actions. It highlights the significance of personal accountability and the need for repentance and reform.",
+        "urdu": "سورہ تحریم اخلاقی سالمیت کو برقرار رکھنے اور گناہ آلود اعمال سے بچنے کی اہمیت پر رہنمائی فراہم کرتی ہے۔ یہ ذاتی جوابدہی کی اہمیت اور توبہ اور اصلاح کی ضرورت کو اجاگر کرتی ہے۔"
+      }
+    ]
+  },
+  {
+    "id": 67,
     "name": "Al-Mulk",
     "summaries": [
       {
@@ -1488,7 +1512,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 67,
+    "id": 68,
     "name": "Al-Qalam",
     "summaries": [
       {
@@ -1500,7 +1524,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 68,
+    "id": 69,
     "name": "Al-Haqqah",
     "summaries": [
       {
@@ -1512,7 +1536,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 69,
+    "id": 70,
     "name": "Al-Ma'arij",
     "summaries": [
       {
@@ -1524,7 +1548,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 70,
+    "id": 71,
     "name": "Nuh",
     "summaries": [
       {
@@ -1536,7 +1560,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 71,
+    "id": 72,
     "name": "Al-Jinn",
     "summaries": [
       {
@@ -1548,7 +1572,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 72,
+    "id": 73,
     "name": "Al-Muzzammil",
     "summaries": [
       {
@@ -1560,7 +1584,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 73,
+    "id": 74,
     "name": "Al-Muddaththir",
     "summaries": [
       {
@@ -1572,7 +1596,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 74,
+    "id": 75,
     "name": "Al-Qiyamah",
     "summaries": [
       {
@@ -1584,7 +1608,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 75,
+    "id": 76,
     "name": "Al-Insan",
     "summaries": [
       {
@@ -1596,7 +1620,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 76,
+    "id": 77,
     "name": "Al-Mursalat",
     "summaries": [
       {
@@ -1608,7 +1632,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 77,
+    "id": 78,
     "name": "An-Naba",
     "summaries": [
       {
@@ -1620,7 +1644,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 78,
+    "id": 79,
     "name": "An-Nazi'at",
     "summaries": [
       {
@@ -1632,7 +1656,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 79,
+    "id": 80,
     "name": "Abasa",
     "summaries": [
       {
@@ -1644,7 +1668,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 80,
+    "id": 81,
     "name": "At-Takwir",
     "summaries": [
       {
@@ -1656,7 +1680,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 81,
+    "id": 82,
     "name": "Al-Infitar",
     "summaries": [
       {
@@ -1668,7 +1692,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 82,
+    "id": 83,
     "name": "Al-Mutaffifin",
     "summaries": [
       {
@@ -1680,7 +1704,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 83,
+    "id": 84,
     "name": "Al-Inshiqaq",
     "summaries": [
       {
@@ -1692,7 +1716,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 84,
+    "id": 85,
     "name": "Al-Buruj",
     "summaries": [
       {
@@ -1704,7 +1728,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 85,
+    "id": 86,
     "name": "At-Tariq",
     "summaries": [
       {
@@ -1716,7 +1740,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 86,
+    "id": 87,
     "name": "Al-A'la",
     "summaries": [
       {
@@ -1728,7 +1752,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 87,
+    "id": 88,
     "name": "Al-Ghashiyah",
     "summaries": [
       {
@@ -1740,7 +1764,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 88,
+    "id": 89,
     "name": "Al-Fajr",
     "summaries": [
       {
@@ -1752,7 +1776,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 89,
+    "id": 90,
     "name": "Al-Balad",
     "summaries": [
       {
@@ -1764,7 +1788,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 90,
+    "id": 91,
     "name": "Ash-Shams",
     "summaries": [
       {
@@ -1776,7 +1800,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 91,
+    "id": 92,
     "name": "Al-Layl",
     "summaries": [
       {
@@ -1788,7 +1812,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 92,
+    "id": 93,
     "name": "Ad-Duha",
     "summaries": [
       {
@@ -1800,7 +1824,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 93,
+    "id": 94,
     "name": "Ash-Sharh",
     "summaries": [
       {
@@ -1812,7 +1836,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 94,
+    "id": 95,
     "name": "At-Tin",
     "summaries": [
       {
@@ -1824,7 +1848,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 95,
+    "id": 96,
     "name": "Al-Alaq",
     "summaries": [
       {
@@ -1836,7 +1860,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 96,
+    "id": 97,
     "name": "Al-Qadr",
     "summaries": [
       {
@@ -1848,7 +1872,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 97,
+    "id": 98,
     "name": "Al-Bayyinah",
     "summaries": [
       {
@@ -1860,7 +1884,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 98,
+    "id": 99,
     "name": "Az-Zalzalah",
     "summaries": [
       {
@@ -1872,7 +1896,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 99,
+    "id": 100,
     "name": "Al-Adiyat",
     "summaries": [
       {
@@ -1884,7 +1908,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 100,
+    "id": 101,
     "name": "Al-Qari'ah",
     "summaries": [
       {
@@ -1896,7 +1920,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 101,
+    "id": 102,
     "name": "At-Takathur",
     "summaries": [
       {
@@ -1908,7 +1932,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 102,
+    "id": 103,
     "name": "Al-Asr",
     "summaries": [
       {
@@ -1920,7 +1944,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 103,
+    "id": 104,
     "name": "Al-Humazah",
     "summaries": [
       {
@@ -1932,7 +1956,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 104,
+    "id": 105,
     "name": "Al-Fil",
     "summaries": [
       {
@@ -1944,7 +1968,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 105,
+    "id": 106,
     "name": "Quraysh",
     "summaries": [
       {
@@ -1956,7 +1980,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 106,
+    "id": 107,
     "name": "Al-Ma'un",
     "summaries": [
       {
@@ -1968,7 +1992,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 107,
+    "id": 108,
     "name": "Al-Kawthar",
     "summaries": [
       {
@@ -1980,7 +2004,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 108,
+    "id": 109,
     "name": "Al-Kafirun",
     "summaries": [
       {
@@ -1992,7 +2016,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 109,
+    "id": 110,
     "name": "An-Nasr",
     "summaries": [
       {
@@ -2004,7 +2028,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 110,
+    "id": 111,
     "name": "Al-Masad",
     "summaries": [
       {
@@ -2016,7 +2040,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 111,
+    "id": 112,
     "name": "Al-Ikhlas",
     "summaries": [
       {
@@ -2028,7 +2052,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 112,
+    "id": 113,
     "name": "Al-Falaq",
     "summaries": [
       {
@@ -2040,7 +2064,7 @@ export const surahs = [
     ]
   },
   {
-    "id": 113,
+    "id": 114,
     "name": "An-Nas",
     "summaries": [
       {
