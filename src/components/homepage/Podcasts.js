@@ -68,7 +68,7 @@ const FeaturedVideos = () => {
   };
 
   return (
-    <section className='bg-white mb-14 md:mb-28'>
+    <section className='bg-white hidden sm:block mb-14 md:mb-28'>
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="text-left md:text-center px-4 mb-6 md:mb-12">
           <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl text-[#111111]">Featured Podcast Videos</h2>

@@ -76,7 +76,7 @@ const Index = ({ data, setDisplayInfo, setToggler }) => {
               key={item.slug || index}
               onClick={() => {
                 setToggler(item?.id)
-                setDisplayInfo(`${item.englishTransliteration}`)
+                setDisplayInfo({english: item.englishTransliteration, arabic: item.arabic})
               }}
               className="bg-[#F1F4F8] cursor-pointer px-5 py-6 hover:bg-gray-100 transition-colors duration-200"
             >

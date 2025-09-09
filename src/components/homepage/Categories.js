@@ -1,7 +1,8 @@
 "use client";
 
 import Link from 'next/link'
-import Slider from "react-slick";
+import dynamic from 'next/dynamic';
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import "slick-carousel/slick/slick.css";

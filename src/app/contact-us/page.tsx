@@ -10,9 +10,9 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <div className='bg-[#F9F9F9]'>
-        <HeroSection 
-          imgUrl='/showcase/collaboration-with-us.png'
-        />
+      <HeroSection>
+        <h1 className='uppercase text-center text-3xl lg:text-5xl xl:text-8xl font-medium'>Get in touch!</h1>
+      </HeroSection>
         <VolunteerForm title="Contact Us" />
       </div>
       <NewsletterSection />

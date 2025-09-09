@@ -13,7 +13,7 @@ import { hadees } from '@/data/details-data-hadeesbytopic'
 const Index = () => {
   const [savedId, setSavedId] = useState(null)
   const [detailObj, setDetailObj] = useState({})
-  const [displayInfo, setDisplayInfo] = useState('')
+  const [displayInfo, setDisplayInfo] = useState({})
 
   useEffect(() => {
     const filteredDetail = hadees?.find((item) => item?.id == savedId) ?? {};
@@ -27,12 +27,15 @@ const Index = () => {
       <Header />
       {savedId ? (
         <HeroSection>
-          <h1 className='text-3xl lg:text-4xl xl:text-6xl font-bold'>{displayInfo}</h1>
+          <div className='w-full flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-6'>
+            <h1 className='uppercase text-3xl lg:text-4xl xl:text-5xl font-bold'>{displayInfo?.english}</h1>
+            <h1 className='text-3xl lg:text-4xl xl:text-8xl font-bold font-arabic'>{displayInfo?.arabic}</h1>
+          </div>
         </HeroSection>
       ) : (
-        <HeroSection
-          imgUrl='/showcase/hadees-by-topic.png'
-        />
+        <HeroSection>
+            <h1 className='uppercase text-center text-3xl lg:text-5xl xl:text-8xl font-medium'>Hadees by Topic</h1>
+        </HeroSection>
       )}
       {savedId ? (
         <ListingCards

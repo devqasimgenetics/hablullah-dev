@@ -25,9 +25,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <HeroSection 
-        imgUrl='/showcase/summary-of-surah.png'
-      />
+      <HeroSection>
+        <h1 className='uppercase text-center text-3xl lg:text-5xl xl:text-8xl font-medium'>Summary of Surah</h1>
+      </HeroSection>
       {savedId ? (
           <DetailCards
             data={detailObj}

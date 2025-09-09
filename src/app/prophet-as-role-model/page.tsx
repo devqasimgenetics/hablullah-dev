@@ -10,9 +10,9 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <div className='bg-[#F9F9F9]'>
-        <HeroSection 
-          imgUrl='/showcase/prophet-as-role-model.png'
-        />
+        <HeroSection>
+          <h1 className='uppercase text-center text-3xl lg:text-5xl xl:text-8xl font-medium'>Prophet (SAW) as Role Model</h1>
+        </HeroSection>
         <RoleModelCards />
       </div>
       <NewsletterSection />
