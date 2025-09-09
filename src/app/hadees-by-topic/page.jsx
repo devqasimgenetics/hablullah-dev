@@ -40,6 +40,7 @@ const Index = () => {
       {savedId ? (
         <ListingCards
           data={detailObj}
+          displayInfo={displayInfo}
           setToggler={setSavedId}
         />
       ) : (
