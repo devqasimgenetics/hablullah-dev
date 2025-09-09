@@ -182,7 +182,7 @@ const Header = () => {
             
             {/* Desktop CTA Button */}
             <Link className="hidden md:block" href={'/contact-us'}>
-              <button className="bg-[#0267B1] flex items-center gap-2 text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
+              <button className="bg-[#0267B1] max-w-44 flex items-center gap-2 text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 py-4 md:py-5">
                 <img className='w-5 h-5' src="/icons/whatsapp-icon.svg" alt="" />
                 ASK QUESTION
               </button>
@@ -262,7 +262,7 @@ const Header = () => {
           {/* Mobile CTA Button */}
           <div className="mt-8 pt-8 border-t">
             <Link href={'/contact-us'} onClick={closeSidebar}>
-              <button className="bg-[#0267B1] flex items-center justify-center gap-2 text-white font-semibold text-sm hover:bg-black transition-colors w-full px-6 py-4 rounded-md">
+              <button className="bg-[#0267B1] max-w-44 flex items-center justify-center gap-2 text-white font-semibold text-sm hover:bg-black transition-colors w-full px-6 py-4 rounded-md">
                 <img className='w-5 h-5' src="/icons/whatsapp-icon.svg" alt="" />
                 ASK QUESTION
               </button>

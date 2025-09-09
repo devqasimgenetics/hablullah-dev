@@ -72,7 +72,7 @@ const Footer = () => (
         </footer>
         <div className="bg-[#0267B1] text-white py-4">
             <div className="max-w-7xl flex items-center justify-between gap-6 mx-auto px-4 sm:px-6 lg:px-8">
-                <p className="text-xs sm:text-sm">Copyright © 2024 | Powered by HABLULLAH</p>
+                <p className="text-xs sm:text-sm">Copyright © 2025 | Powered by HABLULLAH</p>
                 <div className='text-xl flex items-center gap-2 sm:gap-3'>
                     <a href="https://www.facebook.com/hablullah" target='_blank'>
                         <FaFacebookF />

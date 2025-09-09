@@ -15,13 +15,13 @@ const Index = ({ data, displayInfo, setToggler }) => {
 
         {data?.summaries?.map((item, _index) => (
           <div className="bg-[#F1F4F8] cursor-pointer px-5 py-6 hover:bg-gray-100 transition-colors duration-200 mb-6">
-            <h3 className="text-[#111111] font-bold text-sm mb-2">
+            <h3 className="text-[#111111] font-bold text-sm sm:text-base md:text-xl mb-2 sm:mb-3">
               Summary by {item?.author} (Reference: {item?.reference})
             </h3>
-            <h3 className="text-[#525252] font-medium text-sm mb-3">
+            <h3 className="text-[#525252] font-medium text-sm sm:text-base md:text-lg mb-3 sm:mb-6">
               {item?.english}
             </h3>
-            <h3 className="text-gray-900 font-urdu text-right font-semibold text-lg mb-2" dir="rtl">
+            <h3 className="text-[#111111] font-urdu text-right font-normal text-lg sm:text-xl md:text-[26px] mb-2 sm:mb-3" dir="rtl">
               {item?.urdu}
             </h3>
           </div>

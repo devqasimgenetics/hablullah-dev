@@ -83,11 +83,11 @@ const Index = ({ setToggler, setDisplayInfo, data }) => {
               <div className="flex justify-between items-start">
                 {/* Left side - English content */}
                 <div className="flex-1">
-                  <h3 className="text-gray-900 font-medium text-sm mb-2">
+                  <h3 className="text-[#111111] font-semibold text-sm sm:text-base md:text-xl mb-2">
                     {item.englishTransliteration} ({item.englishMeaning})
                   </h3>
                   <div className="space-y-1">
-                    <div className="flex items-center text-xs text-gray-500">
+                    <div className="flex items-center text-sm sm:text-base text-[#3E5261]">
                       <span>{item.number}</span>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ const Index = ({ setToggler, setDisplayInfo, data }) => {
 
                 {/* Right side - Arabic content */}
                 <div className="text-right ml-4 mt-auto">
-                  <h3 className="text-gray-900 font-semibold text-lg mb-2 font-arabic" dir="rtl">
+                  <h3 className="text-[#111111] text-lg sm:text-xl md:text-[28px] font-arabic mb-0" dir="rtl">
                     {item.arabic}
                   </h3>
                 </div>
