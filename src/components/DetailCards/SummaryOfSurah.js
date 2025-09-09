@@ -83,15 +83,15 @@ const Index = ({ setToggler, setDisplayInfo, data }) => {
               <div className="flex justify-between items-start">
                 {/* Left side - English content */}
                 <div className="flex-1">
-                  <h3 className="text-gray-900 font-medium text-sm mb-2">
+                  <h3 className="text-[#111111] font-semibold text-sm sm:text-base md:text-xl mb-2">
                     {item.englishMeaning} ({item.englishTransliteration})
                   </h3>
                   <div className="space-y-1">
-                    <div className="flex items-center text-xs text-gray-500">
+                    <div className="flex items-center text-sm sm:text-base text-[#3E5261]">
                       <span className="font-medium">Chapter Count:</span>
                       <span className="ml-1">{item.number}</span>
                     </div>
-                    <div className="flex items-center text-xs text-gray-500">
+                    <div className="flex items-center text-xs sm:text-base text-[#3E5261]">
                       <span className="font-medium">{item.revelationPlace}</span>
                       <span className="mx-1">|</span>
                       <span>{item.totalVerses}</span>
@@ -101,7 +101,7 @@ const Index = ({ setToggler, setDisplayInfo, data }) => {
 
                 {/* Right side - Arabic content */}
                 <div className="text-right ml-4 mt-auto">
-                  <h3 className="text-gray-900 font-semibold text-lg mb-2 font-arabic" dir="rtl">
+                  <h3 className="text-[#111111] text-lg sm:text-xl md:text-[28px] mb-2 font-arabic" dir="rtl">
                     {item.arabic}
                   </h3>
                 </div>

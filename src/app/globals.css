@@ -22,6 +22,21 @@
   }
 }
 
+@font-face {
+  font-family: "AlMajeed Quranic";
+  src: url("/fonts/AlMajeed-Quranic-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alvi Nastaleeq";
+  src: url("/fonts/AlviNastaleeq-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -29,7 +44,11 @@ body {
 }
 
 .font-arabic {
-  font-family: "Amiri Quran", serif;
+  font-family: "AlMajeed Quranic", serif;
+}
+
+.font-urdu {
+  font-family: "Alvi Nastaleeq";
 }
 
 @media (min-width: 992px) {

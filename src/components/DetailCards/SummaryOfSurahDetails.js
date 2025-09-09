@@ -21,7 +21,7 @@ const Index = ({ data, displayInfo, setToggler }) => {
             <h3 className="text-[#525252] font-medium text-sm mb-3">
               {item?.english}
             </h3>
-            <h3 className="text-gray-900 text-right font-semibold text-lg mb-2 font-arabic" dir="rtl">
+            <h3 className="text-gray-900 font-urdu text-right font-semibold text-lg mb-2" dir="rtl">
               {item?.urdu}
             </h3>
           </div>
