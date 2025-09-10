@@ -13,6 +13,7 @@ import { duas } from '@/data/details-data-feelingwisedua'
 const Index = () => {
   const [savedId, setSavedId] = useState(null)
   const [detailObj, setDetailObj] = useState({})
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const filteredDetail = duas?.find((item) => item?.id === savedId) ?? {};
@@ -34,6 +35,8 @@ const Index = () => {
           />
       ) : (
         <HowAreYouFeeling
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage}
           setToggler={setSavedId}
           data={howAreYouFeeling} />
       )}

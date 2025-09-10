@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Index = ({ setToggler, data }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+const Index = ({ setToggler, data, currentPage, setCurrentPage }) => {
   const itemsPerPage = 10; // You can adjust this number
 
   // Calculate pagination

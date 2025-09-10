@@ -14,6 +14,7 @@ const Index = () => {
   const [savedId, setSavedId] = useState(null)
   const [detailObj, setDetailObj] = useState({})
   const [displayInfo, setDisplayInfo] = useState('')
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const filteredDetail = surahs?.find((item) => item?.id == savedId) ?? {};
@@ -36,6 +37,8 @@ const Index = () => {
           />
       ) : (
         <SummaryOfSurah
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage}
           setToggler={setSavedId}
           setDisplayInfo={setDisplayInfo}
           data={summaryOfSurrah} />
