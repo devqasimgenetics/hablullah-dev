@@ -93,7 +93,7 @@ const Index = ({ setToggler, data }) => {
 
                 {/* Right side - Arabic content */}
                 <div className="text-right ml-4 mt-auto">
-                <h3 className="text-[#111111] text-lg sm:text-xl md:text-[28px] font-arabic" dir="rtl">
+                <h3 className="text-[#111111] text-lg sm:text-xl md:text-[28px] font-urdu" dir="rtl">
                   {item.arabic}
                   </h3>
                 </div>
