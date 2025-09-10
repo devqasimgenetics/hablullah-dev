@@ -75,13 +75,13 @@ const Footer = () => (
                 <p className="text-xs sm:text-sm">Copyright © 2025 | Powered by HABLULLAH</p>
                 <div className='text-xl flex items-center gap-2 sm:gap-3'>
                     <a href="https://www.facebook.com/hablullah" target='_blank'>
-                        <FaFacebookF />
+                        <FaFacebookF className='text-xl sm:text-2xl' />
                     </a>
                     <a href="https://www.instagram.com/hablullah" target='_blank'>
-                        <FaInstagram />
+                        <FaInstagram className='text-xl sm:text-2xl' />
                     </a>
                     <a href="https://www.youtube.com/@Hablullah-live" target='_blank'>
-                        <FaYoutube />
+                        <FaYoutube className='text-xl sm:text-2xl' />
                     </a>
                 </div>
             </div>

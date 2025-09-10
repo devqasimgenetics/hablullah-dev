@@ -1,8 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-
+import { ChevronDown } from 'lucide-react';
 import { data } from './data'
 
 const ProphetBiographyCards = () => {
@@ -16,6 +15,31 @@ const ProphetBiographyCards = () => {
   };
 
   const isExpanded = (cardId) => expandedCards[cardId] || false;
+
+  // Function to split HTML content into paragraphs and get preview
+  const getContentParts = (htmlText) => {
+    // Split by </p> tag to separate paragraphs
+    const paragraphs = htmlText.split('</p>').filter(p => p.trim());
+    
+    if (paragraphs.length <= 2) {
+      // If 2 or fewer paragraphs, show all content
+      return {
+        preview: htmlText,
+        hasMore: false,
+        remaining: ''
+      };
+    }
+
+    // Show first 2 paragraphs as preview
+    const previewParagraphs = paragraphs.slice(0, 2);
+    const remainingParagraphs = paragraphs.slice(2);
+
+    return {
+      preview: previewParagraphs.join('</p>') + (previewParagraphs.length > 0 ? '</p>' : ''),
+      hasMore: remainingParagraphs.length > 0,
+      remaining: remainingParagraphs.join('</p>') + '</p>'
+    };
+  };
 
   const cardVariants = {
     hidden: {
@@ -62,21 +86,6 @@ const ProphetBiographyCards = () => {
     }
   };
 
-  const textVariants = {
-    hidden: {
-      opacity: 0,
-      y: 10
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut"
-      }
-    }
-  };
-
   const buttonVariants = {
     rest: {
       scale: 1
@@ -115,58 +124,62 @@ const ProphetBiographyCards = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6 pb-24">
-      {data.map((item, index) => (
-        <motion.div
-          key={item.id}
-          custom={index}
-          variants={cardVariants}
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
-          className={`bg-white border border-[#BCBCBC] overflow-hidden ${
-            item.hasHeader ? 'border-t-4 border-t-blue-500' : ''
-          }`}
-        >
-          <div className="w-full px-5 py-7">
-            <motion.h2 
-              className="text-xl font-semibold text-gray-900 mb-4"
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
-            >
-              {item.title}
-            </motion.h2>
-            
-            <div className="text-gray-700 leading-relaxed">
-              <AnimatePresence mode="wait">
-                {isExpanded(item.id) ? (
-                  <motion.p
-                    key="expanded"
-                    variants={textVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    className="mb-4"
-                  >
-                    {item.fullText}
-                  </motion.p>
-                ) : (
-                  <motion.p
-                    key="collapsed"
-                    variants={textVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    className="mb-4"
-                  >
-                    {item.preview}
-                  </motion.p>
-                )}
-              </AnimatePresence>
+      <style jsx>{`
+        .verse-text2 {
+          color: #0267B1;
+          font-style: italic;
+          font-weight: 500;
+        }
+        .ayat-unique {
+          color: #0267B1;
+          font-style: italic;
+          font-weight: 500;
+        }
+        .ayat {
+          color: #0267B1;
+          font-style: italic;
+          font-weight: 500;
+        }
+      `}</style>
+      
+      {data.map((item, index) => {
+        const contentParts = getContentParts(item.fullText);
+        const shouldShowButton = contentParts.hasMore;
+
+        return (
+          <motion.div
+            key={item.id}
+            custom={index}
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+            className={`bg-white border border-[#BCBCBC] overflow-hidden ${
+              item.hasHeader ? 'border-t-4 border-t-blue-500' : ''
+            }`}
+          >
+            <div className="w-full px-5 py-7">
+              <motion.h2 
+                className="text-xl font-semibold text-gray-900 mb-4"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+              >
+                {item.title}
+              </motion.h2>
               
-              {item.expandedContent && (
+              <div className="text-gray-700 leading-relaxed">
+                {/* Preview Content (First 2 paragraphs) */}
+                <div 
+                  dangerouslySetInnerHTML={{ 
+                    __html: contentParts.preview 
+                  }}
+                  className="mb-4"
+                />
+                
+                {/* Expanded Content (Remaining paragraphs) */}
                 <AnimatePresence>
-                  {isExpanded(item.id) && (
+                  {isExpanded(item.id) && contentParts.hasMore && (
                     <motion.div
                       variants={contentVariants}
                       initial="collapsed"
@@ -174,42 +187,43 @@ const ProphetBiographyCards = () => {
                       exit="collapsed"
                       className="overflow-hidden"
                     >
-                      <motion.p 
-                        className="text-gray-600 italic mb-4"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3, delay: 0.1 }}
-                      >
-                        {item.expandedContent}
-                      </motion.p>
+                      <div 
+                        dangerouslySetInnerHTML={{ 
+                          __html: contentParts.remaining 
+                        }}
+                        className="mb-4"
+                      />
                     </motion.div>
                   )}
                 </AnimatePresence>
+              </div>
+
+              {/* Show Read More button only if there's more content */}
+              {shouldShowButton && (
+                <motion.button
+                  onClick={() => toggleExpanded(item.id)}
+                  variants={buttonVariants}
+                  initial="rest"
+                  whileHover="hover"
+                  whileTap="tap"
+                  className="inline-flex items-center gap-1 text-[#0267B1] hover:text-black font-medium text-sm transition-colors duration-200 cursor-pointer"
+                >
+                  <span className="uppercase tracking-wide">
+                    {isExpanded(item.id) ? 'Read Less' : 'Read More'}
+                  </span>
+                  <motion.div
+                    variants={iconVariants}
+                    animate={isExpanded(item.id) ? "expanded" : "collapsed"}
+                    className="ml-1"
+                  >
+                    <ChevronDown size={16} />
+                  </motion.div>
+                </motion.button>
               )}
             </div>
-
-            <motion.button
-              onClick={() => toggleExpanded(item.id)}
-              variants={buttonVariants}
-              initial="rest"
-              whileHover="hover"
-              whileTap="tap"
-              className="inline-flex items-center gap-1 text-[#0267B1] hover:text-black font-medium text-sm transition-colors duration-200 cursor-pointer"
-            >
-              <span className="uppercase tracking-wide">
-                {isExpanded(item.id) ? 'Read Less' : 'Read More'}
-              </span>
-              <motion.div
-                variants={iconVariants}
-                animate={isExpanded(item.id) ? "expanded" : "collapsed"}
-                className="ml-1"
-              >
-                <ChevronDown size={16} />
-              </motion.div>
-            </motion.button>
-          </div>
-        </motion.div>
-      ))}
+          </motion.div>
+        );
+      })}
     </div>
   );
 };

@@ -8,7 +8,7 @@ const NewsletterSection = () => (
                 <Link href={'/contact-us'}>
                     <button className="bg-[#0267B1] flex items-center gap-2 text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
                         <img className='w-5 h-5' src="/icons/whatsapp-icon.svg" alt="" />
-                        ASK QUESTION
+                        ASK A QUESTION
                     </button>
                 </Link>
             </div>

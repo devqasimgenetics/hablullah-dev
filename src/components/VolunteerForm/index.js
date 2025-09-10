@@ -121,9 +121,6 @@ export default function JoinTeam({ title }) {
                 </div>
 
                 <div>
-                  <label className="block font-semibold text-sm sm:text-base md:text-xl text-[#111111]">
-                    Write Message
-                  </label>
                   <Field
                     as="textarea"
                     name="message"
@@ -210,7 +207,9 @@ const Socials = () => {
               </a>
             </span>
             <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
-              <FaInstagram className="font-medium text-[#0267B1] text-2xl" />
+              <a href="https://www.instagram.com/" target="_blank">
+                <FaInstagram className="font-medium text-[#0267B1] text-2xl" />
+              </a>
             </span>
             <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
               <a href="https://www.youtube.com/@Hablullah-live" target='_blank'>
