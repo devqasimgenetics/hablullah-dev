@@ -116,7 +116,7 @@ export const data = [
         id: 'mercy',
         title: 'Hazrat Muhammad (SAW) as a Mercy to All Mankind',
         fullText: `<p>Finally, Prophet Muhammad (SAW) was a mercy to all of humanity. His entire life was dedicated to guiding people towards the truth and embodying the principles of Islam. He was sent as a mercy to the worlds, as stated in the Quran: "<span class='ayat'>And We have not sent you, [O Muhammad], except as a mercy to the worlds</span>" (Quran 21:107).</p>
-        <p>Throughout his life, he demonstrated compassion, justice, and mercy in all his actions. Whether dealing with friends, enemies, family, or strangers, he treated everyone with kindness and sought to bring people closer to Allah. His life serves as a comprehensive guide for Muslims and an example for all of humanity to follow.</p>sho`,
+        <p>Throughout his life, he demonstrated compassion, justice, and mercy in all his actions. Whether dealing with friends, enemies, family, or strangers, he treated everyone with kindness and sought to bring people closer to Allah. His life serves as a comprehensive guide for Muslims and an example for all of humanity to follow.</p>`,
         hasHeader: false
     },
 ];
