@@ -11,7 +11,7 @@ const Index = ({ data }) => {
             <h3 className="text-[#111111] font-semibold text-sm sm:text-base md:text-xl mb-2 sm:mb-5">
               Hadith Number: {item?.id}
             </h3>
-            <h3 className="text-[#111111] text-lg sm:text-xl md:text-[28px] font-arabic mb-2 md:mb-3" dir="rtl">
+            <h3 className="text-[#111111] text-lg sm:text-xl md:text-[30px] font-arabic mb-2 md:mb-3" dir="rtl">
               {item?.arabic}
             </h3>
             <h3 className="text-[#525252] font-medium text-sm sm:text-base md:text-xl mb-2 md:mb-3">

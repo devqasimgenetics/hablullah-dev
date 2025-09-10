@@ -109,14 +109,14 @@ const Index = ({ setToggler, data }) => {
               onClick={goToPrevious}
               disabled={currentPage === 1}
               className={`
-                flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-sm font-medium border border-[#D9D9D9] transition-colors duration-200 cursor-pointer
+                flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-sm font-medium border border-[#0267B1] transition-colors duration-200 cursor-pointer
                 ${currentPage === 1
                   ? 'text-gray-400 cursor-not-allowed'
                   : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
                 }
               `}
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft className="w-4 h-4 text-[#0267B1]" />
             </button>
 
             {/* Page Numbers */}
@@ -148,14 +148,14 @@ const Index = ({ setToggler, data }) => {
               onClick={goToNext}
               disabled={currentPage === totalPages}
               className={`
-                flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-sm font-medium border border-[#D9D9D9] transition-colors duration-200 cursor-pointer
+                flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-sm font-medium border border-[#0267B1] transition-colors duration-200 cursor-pointer
                 ${currentPage === totalPages
                   ? 'text-gray-400 cursor-not-allowed'
                   : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
                 }
               `}
             >
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-4 h-4 text-[#0267B1]" />
             </button>
           </div>
         )}
