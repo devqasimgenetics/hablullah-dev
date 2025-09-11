@@ -6,6 +6,7 @@ import DetailsCard from './HadeesByTopicListingDetails'
 const Index = ({ data, displayInfo, setDisplayInfo, setToggler, setIsDetailPageOpen }) => {
   const [hadiths, setHadiths] = useState([])
   const [loading, setLoading] = useState(false)
+  const [displayDetailsInfo, setDisplayDetailsInfo] = useState({})
   const [itemsToShow, setItemsToShow] = useState(10);
 
   const handleLoadMore = () => {
@@ -40,13 +41,17 @@ const Index = ({ data, displayInfo, setDisplayInfo, setToggler, setIsDetailPageO
           setHadiths([])
           hadiths?.length <= 0 && setToggler(null)
           setIsDetailPageOpen(false)
+          setDisplayDetailsInfo({})
         }} className='group w-full flex items-center gap-3 mb-6 sm:mb-8'>
           <span className='text-[#3E5261] text-base md:text-xl lg:text-2xl transition-all group-hover:-left-2'>
             <HiArrowNarrowLeft />
           </span>
-          <span className='font-semibold text-base md:text-xl lg:text-2xl text-[#111111] transition-all group-hover:underline cursor-pointer'>{displayInfo?.english} <span className='font-normal font-arabic'>({displayInfo?.arabic})</span></span>
+          {displayDetailsInfo?.title && hadiths?.length && loading == false ? (
+            <span className='font-semibold text-base md:text-xl lg:text-2xl text-[#111111] transition-all group-hover:underline cursor-pointer'>{displayDetailsInfo?.title}</span>
+          ): (
+            <span className='font-semibold text-base md:text-xl lg:text-2xl text-[#111111] transition-all group-hover:underline cursor-pointer'>{displayInfo?.english} <span className='font-normal font-arabic'>({displayInfo?.arabic})</span></span>
+          )}
         </div>
-
 
         {hadiths?.length && loading == false ? (
           <>
@@ -63,7 +68,7 @@ const Index = ({ data, displayInfo, setDisplayInfo, setToggler, setIsDetailPageO
                   key={item.slug || index}
                   onClick={() => {
                     fetchHadithData(item?.id)
-                    // setDisplayInfo({...displayInfo, arabic: item?.arabic})
+                    setDisplayDetailsInfo({title: item?.english})
                   }}
                   className="bg-[#F1F4F8] cursor-pointer px-5 py-6 hover:bg-gray-100 transition-colors duration-200"
                 >

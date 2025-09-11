@@ -33,7 +33,7 @@ const Index = () => {
           ): (
             <div className='w-full flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-6'>
             <h1 className='uppercase text-3xl lg:text-4xl xl:text-5xl font-bold'>{displayInfo?.english}</h1>
-            <h1 className='text-3xl lg:text-4xl xl:text-8xl font-bold font-arabic'>{displayInfo?.arabic}</h1>
+            <img className='max-w-64 sm:max-w-72 md:max-w-80' src={`/icons/hadees-by-topics/0${displayInfo?.id ?? '1'}.png`} alt="" />
           </div>
           )}
         </HeroSection>
