@@ -37,9 +37,9 @@ const FeaturedVideos = () => {
   const [sliderKey, setSliderKey] = useState(0)
 
   const videos = [
-    { title: "Navigating Misconceptions", thumbnail: "/imgs/homepage/podcast-1.png", link: 'https://www.youtube.com/watch?v=6SIka0SUgl0', description: "Join Hablullah in a though provoking podcast episode featuring a profound discussion with Mufti Syed Sabir Hussain." },
-    { title: "Rasool S.A.W", thumbnail: "/imgs/homepage/podcast-2.png", link: 'https://www.youtube.com/watch?v=rx2l9DW3t6c', description: "Through the highs and lows, the bonds of Islamic brotherhood remain unbreakable. In a world often divided..." },
-    { title: "Balancing Deen", thumbnail: "/imgs/homepage/podcast-3.png", link: 'https://www.youtube.com/watch?v=qjDoXsL8g40', description: "Tune in to our latest podcast episode featuring Moeen Mahmood, the co-founder of Naseeha Institute..." }
+    { title: "Second Marriage: Truth, Challenges & Islamic Perspective", thumbnail: "/imgs/podcast/podcast-1.jpg", link: 'https://www.youtube.com/watch?v=JxyZKpt5cyU', description: "Islam allows second marriage under certain conditions, but it also comes with immense responsibilities, justice, and emotional balance. This discussion covers the true wisdom behind the permission of multiple marriages in Islam and the realities that come with it in today’s society. Dr. Asiya Madni and the panel explore why many second marriages fail, the misconceptions around them, and what Islam truly teaches about fairness, respect, and emotional care for all spouses. The episode also sheds light on how ego, cultural pressure, and lack of understanding have distorted this sacred allowance into a source of conflict rather than harmony." },
+    { title: "From Music to Deen: A Journey of Faith & Transformation | Bashi Malik", thumbnail: "/imgs/podcast/podcast-2.jpg", link: 'https://www.youtube.com/watch?v=eJF5Ui_EkHI&list=PLDmBqg8LTH2ssZJRC1IiaWD4kgJ_BA68_&index=2', description: "In this inspiring episode of the Hablullah Podcast, we listen to the remarkable journey of a Bashi Malik who was once deeply involved in music, songs, and the world of entertainment. From his college days to university life, he was surrounded by rhythms and melodies, but something within him longed for more - something beyond temporary pleasure. This podcast explores how Allah guided him away from music and towards the beauty of Islam. He shares how he left behind his passion for songs for the sake of Deen, and how he redirected his art into meaningful Islamic expressions like nasheeds and creative Islamic arts." },
+    { title: "Arab Islamic Summit & Sumud Flotilla | Silence of the Ummah, Hope of Resistance", thumbnail: "/imgs/podcast/podcast-3.jpg", link: 'https://www.youtube.com/watch?v=d89PI_4eqbs&list=PLDmBqg8LTH2ssZJRC1IiaWD4kgJ_BA68_&index=3', description: "We discuss the recent Arab Islamic Summit and the daring mission of the Sumud Flotilla. The Muslim Ummah today faces one of the most painful realities of our time: the informed attacks of Israel on innocent people and the silence of Muslim leaders. The Prophet Muhammad ﷺ had already prophesized that a time would come when Muslims would be many in number, but weak in strength, because of their love for the world and fear of death. The Arab Islamic Summit was seen as a moment of hope, but it turned into a disappointment with nothing more than verbal condemnations and empty statements. On the other hand, the Sumud Flotilla became a ray of light in these dark times. Brave souls dared to break the blockade, risking their lives to deliver aid to innocents. Their courage reminds us what true resistance and sacrifice look like." }
   ];
 
   // Handle window resize
@@ -153,14 +153,18 @@ const FeaturedVideos = () => {
                     <img
                       src={video.thumbnail}
                       alt={video.title}
-                      className="w-full h-80 object-cover rounded"
+                      className="w-full aspect-video object-cover rounded"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-[#0267b157] bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all rounded">
                     </div>
                   </div>
                   <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-[#111111] mb-2 sm:mb-3">{video.title}</h3>
-                  <p className="font-medium text-sm md:text-base lg:text-lg text-[#525252] mb-4 md:mb-5">{video.description}</p>
+                  <p className="font-medium text-sm md:text-base lg:text-lg text-[#525252] mb-4 md:mb-5">
+                    {video.description.length > 120
+                      ? `${video.description.slice(0, 120)}...`
+                      : video.description}
+                    </p>
                   <Link href={video.link} target='_blank'>
                     <span className="font-semibold text-[#0267B1] text-sm md:text-base hover:text-black underline transition-all mt-auto">WATCH VIDEO</span>
                   </Link>

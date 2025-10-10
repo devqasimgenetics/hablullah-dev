@@ -39,14 +39,14 @@ const Footer = () => (
                             <ul className="space-y-2">
                                 <li className="flex items-center gap-2 font-medium text-sm sm:text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
                                     <MdOutlineLocalPhone className="text-[#0267B1]" />
-                                    <a href="tel:04235297761">
-                                        042 - 35297761
+                                    <a href="tel:923082221628">
+                                        +92 308 2221628
                                     </a>
                                 </li>
                                 <li className="flex items-center gap-2 font-medium text-base md:text-lg text-[#525252] transition-all hover:underline cursor-pointer">
                                     <MdOutlineMailOutline className="text-[#0267B1]" />
-                                    <a href="mailto:hablullah.live@info.com">
-                                        hablullah.live@info.com
+                                    <a href="mailto:info@hablullah.live">
+                                        info@hablullah.live
                                     </a>
                                 </li>
                             </ul>
@@ -58,9 +58,9 @@ const Footer = () => (
                         <div className="space-y-3 text-gray-400">
                             <p className="font-medium text-sm sm:text-base md:text-lg text-[#525252]">Podcast, videos and much more.</p>
                             <div className='text-xl flex items-center gap-2 sm:gap-3'>
-                                <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
+                                {/* <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
                                     <img src="/icons/Google-Play.svg" alt="" />
-                                </Link>
+                                </Link> */}
                                 <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
                                     <img src="/icons/Google-Play-2.svg" alt="" />
                                 </Link>

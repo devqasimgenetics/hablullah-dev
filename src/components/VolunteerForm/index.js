@@ -177,14 +177,18 @@ const Socials = () => {
             <div className="bg-[#0267B1] flex items-center justify-center text-white w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14">
               <Phone size={18} />
             </div>
-            <span className="font-medium text-base md:text-xl text-[#111111] transition-all hover:underline cursor-pointer">042 - 35297761</span>
+            <a href="tel:923082221628">
+              <span className="font-medium text-base md:text-xl text-[#111111] transition-all hover:underline cursor-pointer">+92 308 2221628</span>
+            </a>
           </div>
 
           <div className="group flex items-center gap-3">
             <div className="bg-[#0267B1] flex items-center justify-center text-white w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14">
               <Mail size={18} />
             </div>
-            <span className="font-medium text-base md:text-xl text-[#111111] transition-all hover:underline cursor-pointer">info@hablullah.live</span>
+            <a href="mailto:info@hablullah.live">
+              <span className="font-medium text-base md:text-xl text-[#111111] transition-all hover:underline cursor-pointer">info@hablullah.live</span>
+            </a>
           </div>
 
           <div className="group flex items-center gap-3">
