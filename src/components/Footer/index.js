@@ -74,10 +74,10 @@ const Footer = () => (
             <div className="max-w-7xl flex items-center justify-between gap-6 mx-auto px-4 sm:px-6 lg:px-8">
                 <p className="text-xs sm:text-sm">Copyright © 2025 | Powered by HABLULLAH</p>
                 <div className='text-xl flex items-center gap-2 sm:gap-3'>
-                    <a href="https://www.facebook.com/hablullah" target='_blank'>
+                    <a href="https://www.facebook.com/hablullah.live" target='_blank'>
                         <FaFacebookF className='text-xl sm:text-2xl' />
                     </a>
-                    <a href="https://www.instagram.com/hablullah" target='_blank'>
+                    <a href="https://www.instagram.com/hablullah.live/" target='_blank'>
                         <FaInstagram className='text-xl sm:text-2xl' />
                     </a>
                     <a href="https://www.youtube.com/@Hablullah-live" target='_blank'>

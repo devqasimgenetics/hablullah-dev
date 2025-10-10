@@ -11,7 +11,7 @@ const BlogDetails = ({ params }) => {
         <div className="min-h-screen bg-white">
             <Header />
             <HeroSection>
-                <h1 className='text-3xl lg:text-4xl xl:text-6xl font-bold'>
+                <h1 className='uppercase text-center text-3xl lg:text-5xl xl:text-8xl font-medium'>
                     Blogs
                 </h1>
             </HeroSection>

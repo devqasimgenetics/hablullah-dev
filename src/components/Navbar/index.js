@@ -181,7 +181,11 @@ const Header = () => {
             </ul>
             
             {/* Desktop CTA Button */}
-            <Link className="hidden md:block" href={'/contact-us'}>
+            <Link
+                href="https://wa.me/923082221628"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
               <button className="bg-[#0267B1] max-w-44 flex items-center gap-2 text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 py-4 md:py-5">
                 <img className='w-5 h-5' src="/icons/whatsapp-icon.svg" alt="" />
                 ASK QUESTION

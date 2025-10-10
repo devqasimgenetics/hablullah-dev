@@ -184,7 +184,7 @@ const Socials = () => {
             <div className="bg-[#0267B1] flex items-center justify-center text-white w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14">
               <Mail size={18} />
             </div>
-            <span className="font-medium text-base md:text-xl text-[#111111] transition-all hover:underline cursor-pointer">habibullah.live@info.com</span>
+            <span className="font-medium text-base md:text-xl text-[#111111] transition-all hover:underline cursor-pointer">info@hablullah.live</span>
           </div>
 
           <div className="group flex items-center gap-3">
@@ -202,12 +202,12 @@ const Socials = () => {
           </p>
           <div className="flex gap-3">
             <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
-              <a href="https://www.facebook.com/hablullah" target='_blank'>
+              <a href="https://www.facebook.com/hablullah.live" target='_blank'>
                 <FaFacebookF className="font-medium text-[#0267B1] text-2xl" />
               </a>
             </span>
             <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
-              <a href="https://www.instagram.com/" target="_blank">
+              <a href="https://www.instagram.com/hablullah.live/" target="_blank">
                 <FaInstagram className="font-medium text-[#0267B1] text-2xl" />
               </a>
             </span>
@@ -217,7 +217,7 @@ const Socials = () => {
               </a>
             </span>
             <span className="bg-white w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all hover:bg-gray-100 cursor-pointer">
-              <a href="https://www.linkedin.com/hablullah-live" target='_blank'>
+              <a href="https://www.linkedin.com/company/hablullah/" target='_blank'>
                 <FaLinkedinIn className="font-medium text-[#0267B1] text-2xl" />
               </a>
             </span>
