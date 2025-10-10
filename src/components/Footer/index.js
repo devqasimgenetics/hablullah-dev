@@ -61,9 +61,9 @@ const Footer = () => (
                                 {/* <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
                                     <img src="/icons/Google-Play.svg" alt="" />
                                 </Link> */}
-                                <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
+                                {/* <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
                                     <img src="/icons/Google-Play-2.svg" alt="" />
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </div>
