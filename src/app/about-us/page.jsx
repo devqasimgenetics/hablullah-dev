@@ -9,7 +9,9 @@ const AboutHablullah = () => {
         <div className="min-h-screen bg-white">
             <Header />
             <HeroSection>
-                <h1 className='text-3xl lg:text-4xl xl:text-6xl font-bold'>About Us</h1>
+            <h1 className='uppercase text-center text-3xl lg:text-5xl xl:text-8xl font-medium'>
+                About Us
+            </h1>
             </HeroSection>
             <section className="bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 md:pb-28">

@@ -181,7 +181,7 @@ const Header = () => {
             </ul>
             
             {/* Desktop CTA Button */}
-            <Link
+            {/* <Link
                 href="https://wa.me/923082221628"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -190,7 +190,7 @@ const Header = () => {
                 <img className='w-5 h-5' src="/icons/whatsapp-icon.svg" alt="" />
                 ASK QUESTION
               </button>
-            </Link>
+            </Link> */}
 
             {/* Mobile Menu Button */}
             <button 
@@ -264,14 +264,14 @@ const Header = () => {
           </ul>
 
           {/* Mobile CTA Button */}
-          <div className="mt-8 pt-8 border-t">
+          {/* <div className="mt-8 pt-8 border-t">
             <Link href={'/contact-us'} onClick={closeSidebar}>
               <button className="bg-[#0267B1] max-w-44 flex items-center justify-center gap-2 text-white font-semibold text-sm hover:bg-black transition-colors w-full px-6 py-4 rounded-md">
                 <img className='w-5 h-5' src="/icons/whatsapp-icon.svg" alt="" />
                 ASK QUESTION
               </button>
             </Link>
-          </div>
+          </div> */}
         </nav>
       </div>
     </>

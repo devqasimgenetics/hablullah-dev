@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 const NewsletterSection = () => (
-    <section className="bg-white border-t border-[#111111] py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-white border-t border-[#111111]">
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <h2 className="uppercase font-bold text-xl md:text-3xl lg:text-4xl text-[#111111]">if you need our help!</h2>
                 <Link
@@ -16,7 +16,7 @@ const NewsletterSection = () => (
                     </button>
                 </Link>
             </div>
-        </div>
+        </div> */}
     </section>
 );
 
