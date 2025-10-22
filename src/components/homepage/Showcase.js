@@ -16,11 +16,6 @@ const Showcase = () => {
                     <p className="text-sm md:text-base lg:text-xl mb-8 text-blue-100 max-w-3/4 md:max-w-2xl">
                         Hablullah is an organization, which provides a unique <br /> platform for the youth and provides them avenues to <br /> channel
                     </p>
-                    // <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
-                    //     <button className="bg-[#0267B1] text-white font-semibold text-sm hover:bg-white hover:text-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
-                    //         DOWNLOAD APP NOW
-                    //     </button>
-                    // </Link>
                 </div>
             </div>
         </section>
@@ -38,11 +33,6 @@ const Showcase = () => {
                     <p className="text-sm md:text-base lg:text-xl mb-8 text-blue-100 mx-auto">
                         Hablullah is an organization, which provides a unique platform for the youth and provides them avenues to channel
                     </p>
-                    // <Link href={'https://play.google.com/store/apps/details?id=com.live.app.hablullah&hl=en&pli=1'} target='_blank'>
-                    //     <button className="bg-[#0267B1] text-white font-semibold text-sm hover:bg-white hover:text-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
-                    //         DOWNLOAD APP NOW
-                    //     </button>
-                    // </Link>
                 </div>
             </div>
         </section>
