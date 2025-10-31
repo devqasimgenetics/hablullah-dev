@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "contentful": "^11.8.6",
     "formik": "^2.4.6",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.542.0",

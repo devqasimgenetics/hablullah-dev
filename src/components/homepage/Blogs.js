@@ -6,18 +6,21 @@ const BlogSection = () => {
     {
       title: "Struggling with 5 daily prayers",
       excerpt: "“The prayer is the first deed judged on the Day.",
+      content: `<div></div>`,
       image: "/imgs/homepage/blog-card-2.png",
       reference: "Sunan Ibn Majah, Hadith 4001"
     },
     {
       title: "5 Things to do last days of Ramazan",
       excerpt: "“Whoever fasts Ramadan with faith and seeking reward will have his past sins forgiven.",
+      content: `<div></div>`,
       image: "/imgs/homepage/blog-card-3.png",
       reference: "Sahih Bukhari"
     },
     {
       title: "Getting  Closer To Allah",
       excerpt: "The closest that a servant comes to his Lord is when he is prostrating.",
+      content: `<div></div>`,
       image: "/imgs/homepage/blog-card-4.png",
       reference: "Sahih Muslim."
     }
