@@ -17,11 +17,7 @@ const IslamicGuidanceComponent = () => {
             <div className="w-full px-5 py-6">
               <h3 className="text-lg md:text-2xl font-bold text-[#111111] mb-3">Quran In Life</h3>
               <p className="font-medium text-[#525252] text-sm md:text-base leading-relaxed mb-6 md:mb-7">
-                Feeling lost in the rush of everyday life? Let the Quran be your compass.
-                Whether it's a few lines in the morning or a comforting verse at night,
-                discover how Allah's words can ground your heart. Make it a habit and
-                watch as its guidance gradually transforms your thoughts and
-                relationships for the better.
+                We bring the Quran down to everyday life with short lessons and clear explanations. Each episode shows how Quranic guidance answers real problems young people face and gives simple steps to act on that guidance.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                 <Link href={'/summary-of-surrah'}>
@@ -50,11 +46,7 @@ const IslamicGuidanceComponent = () => {
             <div className="w-full px-5 py-6">
               <h3 className="text-lg md:text-2xl font-bold text-[#111111] mb-3">Dua</h3>
               <p className="font-medium text-[#525252] text-sm md:text-base leading-relaxed mb-6 md:mb-7">
-                Struggling with exams, debt, or heartbreak? Find the perfect supplication
-                and speak from your heart. These concise, authentic duas make it easy to
-                turn to Allah whenever you need Him most. Embrace the power of earnest
-                prayer and witness how it brings peace to your soul and clarity to your
-                journey.
+                We teach practical ways to make dua and connect with Allah in personal moments. From short supplications to heartfelt prayers, our guides make dua easy to learn and comforting to practice.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                 <Link href={'/situation-wise-dua'}>
@@ -89,11 +81,7 @@ const IslamicGuidanceComponent = () => {
                 Prophetic Wisdom At Your Fingertips
               </h2>
               <p className="font-medium text-[#525252] text-sm md:text-lg leading-relaxed mb-6 md:mb-8">
-                Explore the Prophet ﷺ's timeless teachings categorized for real-life
-                issues like parenting, relationships, leadership, and more. Find the
-                perfect hadees for every situation and let the Sunnah enrich your path.
-                With each hadees, you'll gain practical tools to navigate today's
-                challenges with faith and integrity.
+                We share powerful lessons from the Prophet’s life that you can use right away. These short reminders focus on manners, choices, and habits so the Sunnah becomes a living guide for daily decisions.
               </p>
               <Link href={'/hadees-by-topic'}>
                 <button className="w-full sm:w-fit bg-[#0267B1] text-white font-semibold text-sm hover:bg-black transition-colors cursor-pointer px-6 md:px-14 py-4 md:py-5">
