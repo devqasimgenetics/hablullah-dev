@@ -11,6 +11,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Hablullah",
   description: "Hablullah is an organization, which provides a unique platform for the youth and provides them avenues to channel their potential in accordance with Islamic values",
+  icons: {
+    icon: "/favicon.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -20,6 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.jpg" sizes="any" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body className={`${manrope.variable} font-sans antialiased`}>
         {children}
