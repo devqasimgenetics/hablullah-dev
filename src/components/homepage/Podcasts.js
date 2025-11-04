@@ -149,17 +149,21 @@ const FeaturedVideos = () => {
             {videos.map((video, index) => (
               <div key={index} className="px-4">
                 <div className="relative flex flex-col group cursor-pointer">
-                  <div className='relative mb-4 md:mb-6'>
-                    <img
-                      src={video.thumbnail}
-                      alt={video.title}
-                      className="w-full aspect-video object-cover rounded"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-[#0267b157] bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all rounded">
+                  <Link href={video.link} target='_blank'>
+                    <div className='relative mb-4 md:mb-6'>
+                      <img
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="w-full aspect-video object-cover rounded"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-[#0267b157] bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all rounded">
+                      </div>
                     </div>
-                  </div>
-                  <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-[#111111] mb-2 sm:mb-3">{video.title}</h3>
+                  </Link>
+                  <Link href={video.link} target='_blank'>
+                    <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-[#111111] mb-2 sm:mb-3">{video.title}</h3>
+                  </Link>
                   <p className="font-medium text-sm md:text-base lg:text-lg text-[#525252] mb-4 md:mb-5">
                     {video.description.length > 120
                       ? `${video.description.slice(0, 120)}...`
