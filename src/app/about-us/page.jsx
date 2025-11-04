@@ -28,13 +28,7 @@ const AboutHablullah = () => {
                                 About Hablullah
                             </h2>
                             <p className="font-medium text-[#525252] text-sm md:text-base lg:text-lg mb-6 md:mb-10">
-                                Hablullah is an organization, which provides a unique platform for
-                                the youth and provides them avenues to channel their potential in
-                                accordance with Islamic values. Since its inception in 2011,
-                                Hablullah is working to create well-balanced individuals, who are
-                                not only skilled in their respective fields but also recognize and
-                                fulfil their religious obligations and participate actively in
-                                their communities.
+                                Hablullah started almost two years ago to help young people find practical guidance from the Quran and Sunnah. We focus on the real concerns of youth and speak in a clear way so faith feels close and useful. Our aim is to remove cultural habits and wrong ideas that hide true Islamic teachings and guide people back to authentic knowledge. Through podcasts, reels, interviews, and real-life stories, we want to make living Islam easier and more meaningful for today’s generation.
                             </p>
                         </div>
                     </div>
