@@ -195,7 +195,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button 
               onClick={toggleSidebar}
-              className='block md:hidden cursor-pointer p-2 hover:bg-gray-100 rounded-md transition-colors'
+              className='block md:hidden rotate-180 cursor-pointer p-2 hover:bg-gray-100 rounded-md transition-colors'
               aria-label="Toggle menu"
             >
               <RiMenu3Line className='text-black text-xl' />
