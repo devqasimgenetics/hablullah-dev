@@ -156,7 +156,7 @@ const BlogDetails = ({ params, imgUrl = '/bg-blog.svg' }) => {
                                                     </li>
                                                     <li className="flex items-start gap-3">
                                                         <span className="text-gray-600 font-bold">•</span>
-                                                        <span>The Prophet ﷺ said: "The first matter that the slave will be brought to account for on the Day of Judgment is the prayer. If it is sound, then the rest of his deeds will be sound." (Sunan an-Nasa'i)</span>
+                                                        <span>The Prophet ﷺ said: <br /> "The first matter that the slave will be brought to account for on the Day of Judgment is the prayer. If it is sound, then the rest of his deeds will be sound." (Sunan an-Nasa'i)</span>
                                                     </li>
                                                     <li className="flex items-start gap-3">
                                                         <span className="text-gray-600 font-bold">•</span>
@@ -387,10 +387,11 @@ const BlogDetails = ({ params, imgUrl = '/bg-blog.svg' }) => {
                                                 </div>
                                             </section>
                                         </section>
-                                        <div>
+                                        <div className="w-full">
                                             <div className='w-full md:w-[305px] bg-white border-[#DDDDDD] px-4 py-5'>
-                                                <h4 className='font-semibold text-[20px] text-[#111111] leading-[30px]'>Seek </h4>
-                                                <h4 className='font-semibold text-[20px] text-[#111111] leading-[30px] mb-2'>Beneficial knowledge.</h4>
+                                                <h4 className='block md:hidden font-semibold text-[20px] text-[#111111] leading-[30px] mb-2'>Seek Beneficial knowledge.</h4>
+                                                <h4 className='hidden md:block font-semibold text-[20px] text-[#111111] leading-[30px]'>Seek </h4>
+                                                <h4 className='hidden md:block font-semibold text-[20px] text-[#111111] leading-[30px] mb-2'>Beneficial knowledge.</h4>
                                                 <p className='font-medium text-sm text-[#525252] mb-4.5'>Don't miss on new papers!</p>
                                                 <input type="text" placeholder='Email' className='w-full h-11 bg-[#F9F9F9] border border-[#DDDDDD] text-black placeholder:text--[#878787] px-3 mb-3' />
                                                 <button className='w-full h-11 bg-[#0267B1] text-white font-bold text-sm rounded-none'>SUBSCRIBE</button>
