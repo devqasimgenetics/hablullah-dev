@@ -149,7 +149,6 @@ const FeaturedVideos = () => {
             {videos.map((video, index) => (
               <div key={index} className="px-2.5">
                 <div className="relative flex flex-col group cursor-pointer">
-                  <Link href={video.link} target='_blank'>
                     <div className='relative mb-4 md:mb-5'>
                       <img
                         src={video.thumbnail}
@@ -160,11 +159,8 @@ const FeaturedVideos = () => {
                       <div className="absolute inset-0 bg-[#0267b157] bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all rounded">
                       </div>
                     </div>
-                  </Link>
                   <div className='flex flex-col h-44 md:h-[160px]'>
-                    <Link href={video.link} target='_blank'>
-                      <h3 className="text-lg md:text-[20px] font-semibold text-[#111111] mb-2 sm:mb-3">{video.title}</h3>
-                    </Link>
+                    <h3 className="text-lg md:text-[20px] font-semibold text-[#111111] mb-2 sm:mb-3">{video.title}</h3>
                     <p className="font-medium text-base text-[#525252] mb-2">
                       {video.description.length > 120
                         ? `${video.description.slice(0, 120)}...`
