@@ -393,7 +393,7 @@ const BlogDetails = ({ params, imgUrl = '/bg-blog.svg' }) => {
                                                 <h4 className='font-semibold text-[20px] text-[#111111] leading-[30px] mb-2'>Beneficial knowledge.</h4>
                                                 <p className='font-medium text-sm text-[#525252] mb-4.5'>Don't miss on new papers!</p>
                                                 <input type="text" placeholder='Email' className='w-full h-11 bg-[#F9F9F9] border border-[#DDDDDD] text-black placeholder:text--[#878787] px-3 mb-3' />
-                                                <button className='w-full h-11 bg-[#0267B1] font-bold text-sm rounded-none'>SUBSCRIBE</button>
+                                                <button className='w-full h-11 bg-[#0267B1] text-white font-bold text-sm rounded-none'>SUBSCRIBE</button>
                                             </div>
                                         </div>
                                     </main>
