@@ -36,6 +36,15 @@ const FeaturedVideos = () => {
   const [windowWidth, setWindowWidth] = useState(0)
   const [sliderKey, setSliderKey] = useState(0)
 
+  const [fetchedVideos, setfetchedVideos] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/youtube")
+      .then((res) => res.json())
+      .then((data) => setfetchedVideos(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   const videos = [
     { title: "Second Marriage: Truth, Challenges & Islamic Perspective", thumbnail: "/imgs/podcast/podcast-1.jpg", link: 'https://www.youtube.com/watch?v=JxyZKpt5cyU', description: "Islam allows second marriage under certain conditions, but it also comes with immense responsibilities, justice, and emotional balance. This discussion covers the true wisdom behind the permission of multiple marriages in Islam and the realities that come with it in today’s society. Dr. Asiya Madni and the panel explore why many second marriages fail, the misconceptions around them, and what Islam truly teaches about fairness, respect, and emotional care for all spouses. The episode also sheds light on how ego, cultural pressure, and lack of understanding have distorted this sacred allowance into a source of conflict rather than harmony." },
     { title: "From Music to Deen: A Journey of Faith & Transformation | Bashi Malik", thumbnail: "/imgs/podcast/podcast-2.jpg", link: 'https://www.youtube.com/watch?v=eJF5Ui_EkHI', description: "In this inspiring episode of the Hablullah Podcast, we listen to the remarkable journey of a Bashi Malik who was once deeply involved in music, songs, and the world of entertainment. From his college days to university life, he was surrounded by rhythms and melodies, but something within him longed for more - something beyond temporary pleasure. This podcast explores how Allah guided him away from music and towards the beauty of Islam. He shares how he left behind his passion for songs for the sake of Deen, and how he redirected his art into meaningful Islamic expressions like nasheeds and creative Islamic arts." },
@@ -111,7 +120,7 @@ const FeaturedVideos = () => {
   }
 
   // Show loading state during hydration with proper grid layout
-  if (!isClient) {
+  if (!isClient && !fetchedVideos?.length) {
     return (
       <section className='bg-white mb-14 md:mb-28'>
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -137,6 +146,12 @@ const FeaturedVideos = () => {
     )
   }
 
+  function decodeHtmlEntities(text) {
+    const parser = new DOMParser();
+    const decoded = parser.parseFromString(text, "text/html").body.textContent;
+    return decoded;
+  }
+
   return (
     <section className='bg-white mb-14 md:mb-28'>
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -146,14 +161,14 @@ const FeaturedVideos = () => {
 
         <div className="relative">
           <Slider {...settings} key={`slider-${sliderKey}-${windowWidth}`}>
-            {videos.map((video, index) => (
+            {fetchedVideos?.map((video, index) => (
               <div key={index} className="px-4">
                 <div className="relative flex flex-col group cursor-pointer">
-                  <Link href={video.link} target='_blank'>
+                  <Link href={`https://www.youtube.com/watch?v=${video?.id?.videoId}`} target='_blank'>
                     <div className='relative mb-4 md:mb-6'>
                       <img
-                        src={video.thumbnail}
-                        alt={video.title}
+                        src={video?.snippet?.thumbnails?.high?.url}
+                        alt={video?.snippet?.title}
                         className="w-full aspect-video object-cover rounded"
                         loading="lazy"
                       />
@@ -161,15 +176,15 @@ const FeaturedVideos = () => {
                       </div>
                     </div>
                   </Link>
-                  <Link href={video.link} target='_blank'>
-                    <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-[#111111] mb-2 sm:mb-3">{video.title}</h3>
+                  <Link href={`https://www.youtube.com/watch?v=${video?.id?.videoId}`} target='_blank'>
+                    <h3 className="text-base md:text-xl lg:text-2xl title-ellipsis font-semibold text-[#111111] mb-2 sm:mb-3">{decodeHtmlEntities(video?.snippet?.title)}</h3>
                   </Link>
                   <p className="font-medium text-sm md:text-base lg:text-lg text-[#525252] mb-4 md:mb-5">
-                    {video.description.length > 120
-                      ? `${video.description.slice(0, 120)}...`
-                      : video.description}
+                    {video?.snippet?.description?.length > 20
+                      ? `${video?.snippet?.description?.slice(0, 72)}...`
+                      : video?.snippet?.description}
                     </p>
-                  <Link href={video.link} target='_blank'>
+                  <Link href={`https://www.youtube.com/watch?v=${video?.id?.videoId}`} target='_blank'>
                     <span className="font-semibold text-[#0267B1] text-sm md:text-base hover:text-black underline transition-all mt-auto">WATCH VIDEO</span>
                   </Link>
                 </div>
